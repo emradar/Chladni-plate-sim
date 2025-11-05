@@ -1,0 +1,53 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.31/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
+C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDependentOption.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeParseArguments.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CMakePushCheckState.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCSourceRuns.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCXXCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CheckLanguage.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CheckLinkerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CheckSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CheckStructHasMember.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/FindGit.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/FindPkgConfig.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/GNUInstallDirs.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckFlagCommonConfig.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckLinkerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceRuns.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/WriteBasicConfigVersionFile.cmake
+C:/Programmering/Chladni-plate-sim/build/CMakeFiles/cmake.verify_globs
+C:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL_build_config.h.intermediate
+C:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/git-data/grabRef.cmake
+C:/Programmering/Chladni-plate-sim/vendored/SDL/.git/HEAD
+C:/Programmering/Chladni-plate-sim/vendored/SDL/.git/refs/heads/main
+C:/Programmering/Chladni-plate-sim/vendored/SDL/CMakeLists.txt
+C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake/3rdparty.cmake
+C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake/FindLibUSB.cmake
+C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake/GetGitRevisionDescription.cmake
+C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake/GetGitRevisionDescription.cmake.in
+C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake/PreseedEmscriptenCache.cmake
+C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake/PreseedMSVCCache.cmake
+C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake/PreseedNokiaNGageCache.cmake
+C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake/SDL3Config.cmake.in
+C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake/macros.cmake
+C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake/sdlchecks.cmake
+C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake/sdlcommands.cmake
+C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake/sdlcompilers.cmake
+C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake/sdlcpu.cmake
+C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake/sdlmanpages.cmake
+C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake/sdlplatform.cmake
+C:/Programmering/Chladni-plate-sim/vendored/SDL/include/build_config/SDL_build_config.h.cmake
+C:/Programmering/Chladni-plate-sim/vendored/SDL/include/build_config/SDL_revision.h.cmake

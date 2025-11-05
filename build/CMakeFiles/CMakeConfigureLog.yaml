@@ -1,0 +1,1251 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.12.6+db5f6012c for .NET Framework
+      Build started 2025-11-05 01:10:14.
+      
+      Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\3.31.0\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\3.31.0\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\3.31.0\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.55
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Programmering/Chladni-plate-sim/build/CMakeFiles/3.31.0/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.12.6+db5f6012c for .NET Framework
+      Build started 2025-11-05 01:10:15.
+      
+      Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\3.31.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\3.31.0\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\3.31.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.56
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Programmering/Chladni-plate-sim/build/CMakeFiles/3.31.0/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-j51p4t"
+      binary: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-j51p4t"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-j51p4t'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2d167.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 2025-11-05 01:10:16.
+        
+        Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-j51p4t\\cmTC_2d167.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_2d167.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-j51p4t\\Debug\\".
+          Creating directory "cmTC_2d167.dir\\Debug\\cmTC_2d167.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_2d167.dir\\Debug\\cmTC_2d167.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_2d167.dir\\Debug\\cmTC_2d167.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2d167.dir\\Debug\\\\" /Fd"cmTC_2d167.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2d167.dir\\Debug\\\\" /Fd"cmTC_2d167.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-j51p4t\\Debug\\cmTC_2d167.exe" /INCREMENTAL /ILK:"cmTC_2d167.dir\\Debug\\cmTC_2d167.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-j51p4t/Debug/cmTC_2d167.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-j51p4t/Debug/cmTC_2d167.lib" /MACHINE:X64  /machine:x64 cmTC_2d167.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_2d167.vcxproj -> C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-j51p4t\\Debug\\cmTC_2d167.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_2d167.dir\\Debug\\cmTC_2d167.tlog\\unsuccessfulbuild".
+          Touching "cmTC_2d167.dir\\Debug\\cmTC_2d167.tlog\\cmTC_2d167.lastbuildstate".
+        Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-j51p4t\\cmTC_2d167.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.59
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.42.34433.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-adj137"
+      binary: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-adj137"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-adj137'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e0937.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 2025-11-05 01:10:17.
+        
+        Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-adj137\\cmTC_e0937.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_e0937.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-adj137\\Debug\\".
+          Creating directory "cmTC_e0937.dir\\Debug\\cmTC_e0937.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_e0937.dir\\Debug\\cmTC_e0937.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_e0937.dir\\Debug\\cmTC_e0937.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_e0937.dir\\Debug\\\\" /Fd"cmTC_e0937.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_e0937.dir\\Debug\\\\" /Fd"cmTC_e0937.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-adj137\\Debug\\cmTC_e0937.exe" /INCREMENTAL /ILK:"cmTC_e0937.dir\\Debug\\cmTC_e0937.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-adj137/Debug/cmTC_e0937.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-adj137/Debug/cmTC_e0937.lib" /MACHINE:X64  /machine:x64 cmTC_e0937.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_e0937.vcxproj -> C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-adj137\\Debug\\cmTC_e0937.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_e0937.dir\\Debug\\cmTC_e0937.tlog\\unsuccessfulbuild".
+          Touching "cmTC_e0937.dir\\Debug\\cmTC_e0937.tlog\\cmTC_e0937.lastbuildstate".
+        Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-adj137\\cmTC_e0937.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.58
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.42.34433.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "vendored/SDL/cmake/sdlcpu.cmake:95 (try_compile)"
+      - "vendored/SDL/CMakeLists.txt:82 (SDL_DetectTargetCPUArchitectures)"
+    directories:
+      source: "C:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/CMakeTmp/SDL_detect_arch/CMakeFiles/CMakeTmp"
+      binary: "C:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/CMakeTmp/SDL_detect_arch/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake"
+    buildResult:
+      variable: "SDL_CPU_CHECK_ALL"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/CMakeTmp/SDL_detect_arch/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_abf3e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 2025-11-05 01:10:18.
+        
+        Project "C:\\Programmering\\Chladni-plate-sim\\build\\vendored\\SDL\\CMakeFiles\\CMakeTmp\\SDL_detect_arch\\CMakeFiles\\CMakeTmp\\cmTC_abf3e.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_abf3e.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Programmering\\Chladni-plate-sim\\build\\vendored\\SDL\\CMakeFiles\\CMakeTmp\\SDL_detect_arch\\CMakeFiles\\CMakeTmp\\Debug\\".
+          Creating directory "cmTC_abf3e.dir\\Debug\\cmTC_abf3e.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_abf3e.dir\\Debug\\cmTC_abf3e.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_abf3e.dir\\Debug\\cmTC_abf3e.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_abf3e.dir\\Debug\\\\" /Fd"C:\\Programmering\\Chladni-plate-sim\\build\\vendored\\SDL\\CMakeFiles\\CMakeTmp\\SDL_detect_arch\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_abf3e.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\vendored\\SDL\\CMakeFiles\\CMakeTmp\\SDL_detect_arch.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_abf3e.dir\\Debug\\\\" /Fd"C:\\Programmering\\Chladni-plate-sim\\build\\vendored\\SDL\\CMakeFiles\\CMakeTmp\\SDL_detect_arch\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_abf3e.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\vendored\\SDL\\CMakeFiles\\CMakeTmp\\SDL_detect_arch.c"
+          SDL_detect_arch.c
+        Lib:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\Lib.exe /OUT:"C:\\Programmering\\Chladni-plate-sim\\build\\vendored\\SDL\\CMakeFiles\\CMakeTmp\\SDL_detect_arch\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_abf3e.lib" /NOLOGO /MACHINE:X64  /machine:x64 cmTC_abf3e.dir\\Debug\\SDL_detect_arch.obj
+          cmTC_abf3e.vcxproj -> C:\\Programmering\\Chladni-plate-sim\\build\\vendored\\SDL\\CMakeFiles\\CMakeTmp\\SDL_detect_arch\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_abf3e.lib
+        FinalizeBuildStatus:
+          Deleting file "cmTC_abf3e.dir\\Debug\\cmTC_abf3e.tlog\\unsuccessfulbuild".
+          Touching "cmTC_abf3e.dir\\Debug\\cmTC_abf3e.tlog\\cmTC_abf3e.lastbuildstate".
+        Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\vendored\\SDL\\CMakeFiles\\CMakeTmp\\SDL_detect_arch\\CMakeFiles\\CMakeTmp\\cmTC_abf3e.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.51
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "vendored/SDL/cmake/PreseedMSVCCache.cmake:3 (check_c_source_compiles)"
+      - "vendored/SDL/CMakeLists.txt:431 (SDL_Preseed_CMakeCache)"
+    checks:
+      - "Performing Test CAN_PRESEED"
+    directories:
+      source: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-icyhcg"
+      binary: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-icyhcg"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake"
+    buildResult:
+      variable: "CAN_PRESEED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-icyhcg'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c4c69.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 2025-11-05 01:10:18.
+        
+        Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-icyhcg\\cmTC_c4c69.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_c4c69.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-icyhcg\\Debug\\".
+          Creating directory "cmTC_c4c69.dir\\Debug\\cmTC_c4c69.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_c4c69.dir\\Debug\\cmTC_c4c69.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_c4c69.dir\\Debug\\cmTC_c4c69.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D CAN_PRESEED /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c4c69.dir\\Debug\\\\" /Fd"cmTC_c4c69.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-icyhcg\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D CAN_PRESEED /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c4c69.dir\\Debug\\\\" /Fd"cmTC_c4c69.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-icyhcg\\src.c"
+          src.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-icyhcg\\Debug\\cmTC_c4c69.exe" /INCREMENTAL /ILK:"cmTC_c4c69.dir\\Debug\\cmTC_c4c69.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-icyhcg/Debug/cmTC_c4c69.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-icyhcg/Debug/cmTC_c4c69.lib" /MACHINE:X64  /machine:x64 cmTC_c4c69.dir\\Debug\\src.obj
+          cmTC_c4c69.vcxproj -> C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-icyhcg\\Debug\\cmTC_c4c69.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_c4c69.dir\\Debug\\cmTC_c4c69.tlog\\unsuccessfulbuild".
+          Touching "cmTC_c4c69.dir\\Debug\\cmTC_c4c69.tlog\\cmTC_c4c69.lastbuildstate".
+        Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-icyhcg\\cmTC_c4c69.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.59
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "vendored/SDL/cmake/sdlcompilers.cmake:173 (check_c_source_compiles)"
+      - "vendored/SDL/CMakeLists.txt:700 (check_x86_source_compiles)"
+    checks:
+      - "Performing Test COMPILER_SUPPORTS_MMX"
+    directories:
+      source: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-8zt5g5"
+      binary: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-8zt5g5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORTS_MMX"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-8zt5g5'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c172c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 2025-11-05 01:10:19.
+        
+        Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8zt5g5\\cmTC_c172c.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_c172c.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8zt5g5\\Debug\\".
+          Creating directory "cmTC_c172c.dir\\Debug\\cmTC_c172c.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_c172c.dir\\Debug\\cmTC_c172c.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_c172c.dir\\Debug\\cmTC_c172c.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D COMPILER_SUPPORTS_MMX /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c172c.dir\\Debug\\\\" /Fd"cmTC_c172c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8zt5g5\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D COMPILER_SUPPORTS_MMX /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c172c.dir\\Debug\\\\" /Fd"cmTC_c172c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8zt5g5\\src.c"
+          src.c
+        C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8zt5g5\\src.c(15,27): warning C4013: '_mm_add_pi32' undefined; assuming extern returning int [C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8zt5g5\\cmTC_c172c.vcxproj]
+        C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8zt5g5\\src.c(15,25): error C2440: '=': cannot convert from 'int' to '__m64' [C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8zt5g5\\cmTC_c172c.vcxproj]
+        Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8zt5g5\\cmTC_c172c.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8zt5g5\\cmTC_c172c.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8zt5g5\\src.c(15,27): warning C4013: '_mm_add_pi32' undefined; assuming extern returning int [C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8zt5g5\\cmTC_c172c.vcxproj]
+        
+        
+        "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8zt5g5\\cmTC_c172c.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8zt5g5\\src.c(15,25): error C2440: '=': cannot convert from 'int' to '__m64' [C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8zt5g5\\cmTC_c172c.vcxproj]
+        
+            1 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.36
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "vendored/SDL/cmake/sdlcompilers.cmake:173 (check_c_source_compiles)"
+      - "vendored/SDL/CMakeLists.txt:721 (check_x86_source_compiles)"
+    checks:
+      - "Performing Test COMPILER_SUPPORTS_SSE"
+    directories:
+      source: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-6c8vyu"
+      binary: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-6c8vyu"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORTS_SSE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-6c8vyu'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_49262.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 2025-11-05 01:10:20.
+        
+        Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6c8vyu\\cmTC_49262.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_49262.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6c8vyu\\Debug\\".
+          Creating directory "cmTC_49262.dir\\Debug\\cmTC_49262.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_49262.dir\\Debug\\cmTC_49262.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_49262.dir\\Debug\\cmTC_49262.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D COMPILER_SUPPORTS_SSE /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_49262.dir\\Debug\\\\" /Fd"cmTC_49262.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6c8vyu\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D COMPILER_SUPPORTS_SSE /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_49262.dir\\Debug\\\\" /Fd"cmTC_49262.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6c8vyu\\src.c"
+          src.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6c8vyu\\Debug\\cmTC_49262.exe" /INCREMENTAL /ILK:"cmTC_49262.dir\\Debug\\cmTC_49262.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-6c8vyu/Debug/cmTC_49262.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-6c8vyu/Debug/cmTC_49262.lib" /MACHINE:X64  /machine:x64 cmTC_49262.dir\\Debug\\src.obj
+          cmTC_49262.vcxproj -> C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6c8vyu\\Debug\\cmTC_49262.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_49262.dir\\Debug\\cmTC_49262.tlog\\unsuccessfulbuild".
+          Touching "cmTC_49262.dir\\Debug\\cmTC_49262.tlog\\cmTC_49262.lastbuildstate".
+        Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6c8vyu\\cmTC_49262.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.59
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "vendored/SDL/cmake/sdlcompilers.cmake:173 (check_c_source_compiles)"
+      - "vendored/SDL/CMakeLists.txt:742 (check_x86_source_compiles)"
+    checks:
+      - "Performing Test COMPILER_SUPPORTS_SSE2"
+    directories:
+      source: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-5ztflb"
+      binary: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-5ztflb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORTS_SSE2"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-5ztflb'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_43629.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 2025-11-05 01:10:21.
+        
+        Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5ztflb\\cmTC_43629.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_43629.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5ztflb\\Debug\\".
+          Creating directory "cmTC_43629.dir\\Debug\\cmTC_43629.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_43629.dir\\Debug\\cmTC_43629.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_43629.dir\\Debug\\cmTC_43629.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D COMPILER_SUPPORTS_SSE2 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_43629.dir\\Debug\\\\" /Fd"cmTC_43629.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5ztflb\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D COMPILER_SUPPORTS_SSE2 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_43629.dir\\Debug\\\\" /Fd"cmTC_43629.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5ztflb\\src.c"
+          src.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5ztflb\\Debug\\cmTC_43629.exe" /INCREMENTAL /ILK:"cmTC_43629.dir\\Debug\\cmTC_43629.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-5ztflb/Debug/cmTC_43629.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-5ztflb/Debug/cmTC_43629.lib" /MACHINE:X64  /machine:x64 cmTC_43629.dir\\Debug\\src.obj
+          cmTC_43629.vcxproj -> C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5ztflb\\Debug\\cmTC_43629.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_43629.dir\\Debug\\cmTC_43629.tlog\\unsuccessfulbuild".
+          Touching "cmTC_43629.dir\\Debug\\cmTC_43629.tlog\\cmTC_43629.lastbuildstate".
+        Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5ztflb\\cmTC_43629.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.59
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "vendored/SDL/cmake/sdlcompilers.cmake:173 (check_c_source_compiles)"
+      - "vendored/SDL/CMakeLists.txt:763 (check_x86_source_compiles)"
+    checks:
+      - "Performing Test COMPILER_SUPPORTS_SSE3"
+    directories:
+      source: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-mpewrm"
+      binary: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-mpewrm"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORTS_SSE3"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-mpewrm'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_a1feb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 2025-11-05 01:10:22.
+        
+        Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mpewrm\\cmTC_a1feb.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_a1feb.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mpewrm\\Debug\\".
+          Creating directory "cmTC_a1feb.dir\\Debug\\cmTC_a1feb.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_a1feb.dir\\Debug\\cmTC_a1feb.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_a1feb.dir\\Debug\\cmTC_a1feb.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D COMPILER_SUPPORTS_SSE3 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a1feb.dir\\Debug\\\\" /Fd"cmTC_a1feb.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mpewrm\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D COMPILER_SUPPORTS_SSE3 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a1feb.dir\\Debug\\\\" /Fd"cmTC_a1feb.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mpewrm\\src.c"
+          src.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mpewrm\\Debug\\cmTC_a1feb.exe" /INCREMENTAL /ILK:"cmTC_a1feb.dir\\Debug\\cmTC_a1feb.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-mpewrm/Debug/cmTC_a1feb.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-mpewrm/Debug/cmTC_a1feb.lib" /MACHINE:X64  /machine:x64 cmTC_a1feb.dir\\Debug\\src.obj
+          cmTC_a1feb.vcxproj -> C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mpewrm\\Debug\\cmTC_a1feb.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_a1feb.dir\\Debug\\cmTC_a1feb.tlog\\unsuccessfulbuild".
+          Touching "cmTC_a1feb.dir\\Debug\\cmTC_a1feb.tlog\\cmTC_a1feb.lastbuildstate".
+        Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mpewrm\\cmTC_a1feb.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.65
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "vendored/SDL/cmake/sdlcompilers.cmake:173 (check_c_source_compiles)"
+      - "vendored/SDL/CMakeLists.txt:784 (check_x86_source_compiles)"
+    checks:
+      - "Performing Test COMPILER_SUPPORTS_SSE4_1"
+    directories:
+      source: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-upjn0g"
+      binary: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-upjn0g"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORTS_SSE4_1"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-upjn0g'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_48e16.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 2025-11-05 01:10:23.
+        
+        Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-upjn0g\\cmTC_48e16.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_48e16.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-upjn0g\\Debug\\".
+          Creating directory "cmTC_48e16.dir\\Debug\\cmTC_48e16.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_48e16.dir\\Debug\\cmTC_48e16.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_48e16.dir\\Debug\\cmTC_48e16.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D COMPILER_SUPPORTS_SSE4_1 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_48e16.dir\\Debug\\\\" /Fd"cmTC_48e16.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-upjn0g\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D COMPILER_SUPPORTS_SSE4_1 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_48e16.dir\\Debug\\\\" /Fd"cmTC_48e16.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-upjn0g\\src.c"
+          src.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-upjn0g\\Debug\\cmTC_48e16.exe" /INCREMENTAL /ILK:"cmTC_48e16.dir\\Debug\\cmTC_48e16.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-upjn0g/Debug/cmTC_48e16.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-upjn0g/Debug/cmTC_48e16.lib" /MACHINE:X64  /machine:x64 cmTC_48e16.dir\\Debug\\src.obj
+          cmTC_48e16.vcxproj -> C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-upjn0g\\Debug\\cmTC_48e16.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_48e16.dir\\Debug\\cmTC_48e16.tlog\\unsuccessfulbuild".
+          Touching "cmTC_48e16.dir\\Debug\\cmTC_48e16.tlog\\cmTC_48e16.lastbuildstate".
+        Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-upjn0g\\cmTC_48e16.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.63
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "vendored/SDL/cmake/sdlcompilers.cmake:173 (check_c_source_compiles)"
+      - "vendored/SDL/CMakeLists.txt:805 (check_x86_source_compiles)"
+    checks:
+      - "Performing Test COMPILER_SUPPORTS_SSE4_2"
+    directories:
+      source: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-4fsn9i"
+      binary: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-4fsn9i"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORTS_SSE4_2"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-4fsn9i'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d4a33.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 2025-11-05 01:10:23.
+        
+        Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4fsn9i\\cmTC_d4a33.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_d4a33.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4fsn9i\\Debug\\".
+          Creating directory "cmTC_d4a33.dir\\Debug\\cmTC_d4a33.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_d4a33.dir\\Debug\\cmTC_d4a33.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_d4a33.dir\\Debug\\cmTC_d4a33.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D COMPILER_SUPPORTS_SSE4_2 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d4a33.dir\\Debug\\\\" /Fd"cmTC_d4a33.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4fsn9i\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D COMPILER_SUPPORTS_SSE4_2 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d4a33.dir\\Debug\\\\" /Fd"cmTC_d4a33.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4fsn9i\\src.c"
+          src.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4fsn9i\\Debug\\cmTC_d4a33.exe" /INCREMENTAL /ILK:"cmTC_d4a33.dir\\Debug\\cmTC_d4a33.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-4fsn9i/Debug/cmTC_d4a33.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-4fsn9i/Debug/cmTC_d4a33.lib" /MACHINE:X64  /machine:x64 cmTC_d4a33.dir\\Debug\\src.obj
+          cmTC_d4a33.vcxproj -> C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4fsn9i\\Debug\\cmTC_d4a33.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_d4a33.dir\\Debug\\cmTC_d4a33.tlog\\unsuccessfulbuild".
+          Touching "cmTC_d4a33.dir\\Debug\\cmTC_d4a33.tlog\\cmTC_d4a33.lastbuildstate".
+        Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4fsn9i\\cmTC_d4a33.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.61
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "vendored/SDL/cmake/sdlcompilers.cmake:173 (check_c_source_compiles)"
+      - "vendored/SDL/CMakeLists.txt:823 (check_x86_source_compiles)"
+    checks:
+      - "Performing Test COMPILER_SUPPORTS_AVX"
+    directories:
+      source: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-sdxr5s"
+      binary: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-sdxr5s"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORTS_AVX"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-sdxr5s'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e1f88.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 2025-11-05 01:10:24.
+        
+        Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sdxr5s\\cmTC_e1f88.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_e1f88.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sdxr5s\\Debug\\".
+          Creating directory "cmTC_e1f88.dir\\Debug\\cmTC_e1f88.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_e1f88.dir\\Debug\\cmTC_e1f88.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_e1f88.dir\\Debug\\cmTC_e1f88.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D COMPILER_SUPPORTS_AVX /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e1f88.dir\\Debug\\\\" /Fd"cmTC_e1f88.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sdxr5s\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D COMPILER_SUPPORTS_AVX /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e1f88.dir\\Debug\\\\" /Fd"cmTC_e1f88.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sdxr5s\\src.c"
+          src.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sdxr5s\\Debug\\cmTC_e1f88.exe" /INCREMENTAL /ILK:"cmTC_e1f88.dir\\Debug\\cmTC_e1f88.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-sdxr5s/Debug/cmTC_e1f88.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-sdxr5s/Debug/cmTC_e1f88.lib" /MACHINE:X64  /machine:x64 cmTC_e1f88.dir\\Debug\\src.obj
+          cmTC_e1f88.vcxproj -> C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sdxr5s\\Debug\\cmTC_e1f88.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_e1f88.dir\\Debug\\cmTC_e1f88.tlog\\unsuccessfulbuild".
+          Touching "cmTC_e1f88.dir\\Debug\\cmTC_e1f88.tlog\\cmTC_e1f88.lastbuildstate".
+        Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sdxr5s\\cmTC_e1f88.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.65
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "vendored/SDL/cmake/sdlcompilers.cmake:173 (check_c_source_compiles)"
+      - "vendored/SDL/CMakeLists.txt:844 (check_x86_source_compiles)"
+    checks:
+      - "Performing Test COMPILER_SUPPORTS_AVX2"
+    directories:
+      source: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-bqnuo1"
+      binary: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-bqnuo1"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORTS_AVX2"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-bqnuo1'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_1fd60.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 2025-11-05 01:10:25.
+        
+        Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bqnuo1\\cmTC_1fd60.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_1fd60.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bqnuo1\\Debug\\".
+          Creating directory "cmTC_1fd60.dir\\Debug\\cmTC_1fd60.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_1fd60.dir\\Debug\\cmTC_1fd60.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_1fd60.dir\\Debug\\cmTC_1fd60.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D COMPILER_SUPPORTS_AVX2 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1fd60.dir\\Debug\\\\" /Fd"cmTC_1fd60.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bqnuo1\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D COMPILER_SUPPORTS_AVX2 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1fd60.dir\\Debug\\\\" /Fd"cmTC_1fd60.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bqnuo1\\src.c"
+          src.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bqnuo1\\Debug\\cmTC_1fd60.exe" /INCREMENTAL /ILK:"cmTC_1fd60.dir\\Debug\\cmTC_1fd60.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-bqnuo1/Debug/cmTC_1fd60.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-bqnuo1/Debug/cmTC_1fd60.lib" /MACHINE:X64  /machine:x64 cmTC_1fd60.dir\\Debug\\src.obj
+          cmTC_1fd60.vcxproj -> C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bqnuo1\\Debug\\cmTC_1fd60.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_1fd60.dir\\Debug\\cmTC_1fd60.tlog\\unsuccessfulbuild".
+          Touching "cmTC_1fd60.dir\\Debug\\cmTC_1fd60.tlog\\cmTC_1fd60.lastbuildstate".
+        Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bqnuo1\\cmTC_1fd60.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.64
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "vendored/SDL/cmake/sdlcompilers.cmake:173 (check_c_source_compiles)"
+      - "vendored/SDL/CMakeLists.txt:865 (check_x86_source_compiles)"
+    checks:
+      - "Performing Test COMPILER_SUPPORTS_AVX512F"
+    directories:
+      source: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-4h4p5w"
+      binary: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-4h4p5w"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORTS_AVX512F"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-4h4p5w'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f1d05.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 2025-11-05 01:10:26.
+        
+        Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4h4p5w\\cmTC_f1d05.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_f1d05.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4h4p5w\\Debug\\".
+          Creating directory "cmTC_f1d05.dir\\Debug\\cmTC_f1d05.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_f1d05.dir\\Debug\\cmTC_f1d05.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_f1d05.dir\\Debug\\cmTC_f1d05.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D COMPILER_SUPPORTS_AVX512F /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f1d05.dir\\Debug\\\\" /Fd"cmTC_f1d05.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4h4p5w\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D COMPILER_SUPPORTS_AVX512F /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f1d05.dir\\Debug\\\\" /Fd"cmTC_f1d05.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4h4p5w\\src.c"
+          src.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4h4p5w\\Debug\\cmTC_f1d05.exe" /INCREMENTAL /ILK:"cmTC_f1d05.dir\\Debug\\cmTC_f1d05.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-4h4p5w/Debug/cmTC_f1d05.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-4h4p5w/Debug/cmTC_f1d05.lib" /MACHINE:X64  /machine:x64 cmTC_f1d05.dir\\Debug\\src.obj
+          cmTC_f1d05.vcxproj -> C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4h4p5w\\Debug\\cmTC_f1d05.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_f1d05.dir\\Debug\\cmTC_f1d05.tlog\\unsuccessfulbuild".
+          Touching "cmTC_f1d05.dir\\Debug\\cmTC_f1d05.tlog\\cmTC_f1d05.lastbuildstate".
+        Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4h4p5w\\cmTC_f1d05.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.62
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake:163 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake:68 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "vendored/SDL/CMakeLists.txt:1106 (check_symbol_exists)"
+    checks:
+      - "Looking for _copysign"
+    directories:
+      source: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-2tuuci"
+      binary: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-2tuuci"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake"
+    buildResult:
+      variable: "LIBC_HAS__COPYSIGN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-2tuuci'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_abf8f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 2025-11-05 01:10:27.
+        
+        Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2tuuci\\cmTC_abf8f.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_abf8f.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2tuuci\\Debug\\".
+          Creating directory "cmTC_abf8f.dir\\Debug\\cmTC_abf8f.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_abf8f.dir\\Debug\\cmTC_abf8f.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_abf8f.dir\\Debug\\cmTC_abf8f.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_abf8f.dir\\Debug\\\\" /Fd"cmTC_abf8f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2tuuci\\CheckSymbolExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_abf8f.dir\\Debug\\\\" /Fd"cmTC_abf8f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2tuuci\\CheckSymbolExists.c"
+          CheckSymbolExists.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2tuuci\\Debug\\cmTC_abf8f.exe" /INCREMENTAL /ILK:"cmTC_abf8f.dir\\Debug\\cmTC_abf8f.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-2tuuci/Debug/cmTC_abf8f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-2tuuci/Debug/cmTC_abf8f.lib" /MACHINE:X64  /machine:x64 cmTC_abf8f.dir\\Debug\\CheckSymbolExists.obj
+          cmTC_abf8f.vcxproj -> C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2tuuci\\Debug\\cmTC_abf8f.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_abf8f.dir\\Debug\\cmTC_abf8f.tlog\\unsuccessfulbuild".
+          Touching "cmTC_abf8f.dir\\Debug\\cmTC_abf8f.tlog\\cmTC_abf8f.lastbuildstate".
+        Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2tuuci\\cmTC_abf8f.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.68
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake:163 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake:68 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "vendored/SDL/CMakeLists.txt:1106 (check_symbol_exists)"
+    checks:
+      - "Looking for _fseeki64"
+    directories:
+      source: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-7tbgrx"
+      binary: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-7tbgrx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake"
+    buildResult:
+      variable: "LIBC_HAS__FSEEKI64"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-7tbgrx'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_fcba0.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 2025-11-05 01:10:28.
+        
+        Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tbgrx\\cmTC_fcba0.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_fcba0.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tbgrx\\Debug\\".
+          Creating directory "cmTC_fcba0.dir\\Debug\\cmTC_fcba0.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_fcba0.dir\\Debug\\cmTC_fcba0.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_fcba0.dir\\Debug\\cmTC_fcba0.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fcba0.dir\\Debug\\\\" /Fd"cmTC_fcba0.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tbgrx\\CheckSymbolExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fcba0.dir\\Debug\\\\" /Fd"cmTC_fcba0.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tbgrx\\CheckSymbolExists.c"
+          CheckSymbolExists.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tbgrx\\Debug\\cmTC_fcba0.exe" /INCREMENTAL /ILK:"cmTC_fcba0.dir\\Debug\\cmTC_fcba0.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-7tbgrx/Debug/cmTC_fcba0.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-7tbgrx/Debug/cmTC_fcba0.lib" /MACHINE:X64  /machine:x64 cmTC_fcba0.dir\\Debug\\CheckSymbolExists.obj
+          cmTC_fcba0.vcxproj -> C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tbgrx\\Debug\\cmTC_fcba0.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_fcba0.dir\\Debug\\cmTC_fcba0.tlog\\unsuccessfulbuild".
+          Touching "cmTC_fcba0.dir\\Debug\\cmTC_fcba0.tlog\\cmTC_fcba0.lastbuildstate".
+        Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tbgrx\\cmTC_fcba0.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.64
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "vendored/SDL/CMakeLists.txt:2227 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_GAMEINPUT_H"
+    directories:
+      source: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-74h1iw"
+      binary: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-74h1iw"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake"
+    buildResult:
+      variable: "HAVE_GAMEINPUT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-74h1iw'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_48e9e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 2025-11-05 01:10:29.
+        
+        Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-74h1iw\\cmTC_48e9e.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_48e9e.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-74h1iw\\Debug\\".
+          Creating directory "cmTC_48e9e.dir\\Debug\\cmTC_48e9e.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_48e9e.dir\\Debug\\cmTC_48e9e.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_48e9e.dir\\Debug\\cmTC_48e9e.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_GAMEINPUT_H /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_48e9e.dir\\Debug\\\\" /Fd"cmTC_48e9e.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-74h1iw\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_GAMEINPUT_H /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_48e9e.dir\\Debug\\\\" /Fd"cmTC_48e9e.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-74h1iw\\src.c"
+          src.c
+        C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-74h1iw\\src.c(4,14): error C1083: Cannot open include file: 'gameinput.h': No such file or directory [C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-74h1iw\\cmTC_48e9e.vcxproj]
+        Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-74h1iw\\cmTC_48e9e.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-74h1iw\\cmTC_48e9e.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-74h1iw\\src.c(4,14): error C1083: Cannot open include file: 'gameinput.h': No such file or directory [C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-74h1iw\\cmTC_48e9e.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.36
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "vendored/SDL/CMakeLists.txt:2233 (check_include_file)"
+    checks:
+      - "Looking for dxgi1_5.h"
+    directories:
+      source: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-z39g1l"
+      binary: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-z39g1l"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake"
+    buildResult:
+      variable: "HAVE_DXGI1_5_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-z39g1l'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_494ff.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 2025-11-05 01:10:29.
+        
+        Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z39g1l\\cmTC_494ff.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_494ff.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z39g1l\\Debug\\".
+          Creating directory "cmTC_494ff.dir\\Debug\\cmTC_494ff.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_494ff.dir\\Debug\\cmTC_494ff.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_494ff.dir\\Debug\\cmTC_494ff.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_494ff.dir\\Debug\\\\" /Fd"cmTC_494ff.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z39g1l\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_494ff.dir\\Debug\\\\" /Fd"cmTC_494ff.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z39g1l\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z39g1l\\Debug\\cmTC_494ff.exe" /INCREMENTAL /ILK:"cmTC_494ff.dir\\Debug\\cmTC_494ff.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-z39g1l/Debug/cmTC_494ff.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-z39g1l/Debug/cmTC_494ff.lib" /MACHINE:X64  /machine:x64 cmTC_494ff.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_494ff.vcxproj -> C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z39g1l\\Debug\\cmTC_494ff.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_494ff.dir\\Debug\\cmTC_494ff.tlog\\unsuccessfulbuild".
+          Touching "cmTC_494ff.dir\\Debug\\cmTC_494ff.tlog\\cmTC_494ff.lastbuildstate".
+        Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z39g1l\\cmTC_494ff.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.88
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "vendored/SDL/CMakeLists.txt:2234 (check_include_file)"
+    checks:
+      - "Looking for dxgi1_6.h"
+    directories:
+      source: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-31c1pb"
+      binary: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-31c1pb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake"
+    buildResult:
+      variable: "HAVE_DXGI1_6_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-31c1pb'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_fbe6a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 2025-11-05 01:10:31.
+        
+        Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-31c1pb\\cmTC_fbe6a.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_fbe6a.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-31c1pb\\Debug\\".
+          Creating directory "cmTC_fbe6a.dir\\Debug\\cmTC_fbe6a.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_fbe6a.dir\\Debug\\cmTC_fbe6a.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_fbe6a.dir\\Debug\\cmTC_fbe6a.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fbe6a.dir\\Debug\\\\" /Fd"cmTC_fbe6a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-31c1pb\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fbe6a.dir\\Debug\\\\" /Fd"cmTC_fbe6a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-31c1pb\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-31c1pb\\Debug\\cmTC_fbe6a.exe" /INCREMENTAL /ILK:"cmTC_fbe6a.dir\\Debug\\cmTC_fbe6a.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-31c1pb/Debug/cmTC_fbe6a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-31c1pb/Debug/cmTC_fbe6a.lib" /MACHINE:X64  /machine:x64 cmTC_fbe6a.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_fbe6a.vcxproj -> C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-31c1pb\\Debug\\cmTC_fbe6a.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_fbe6a.dir\\Debug\\cmTC_fbe6a.tlog\\unsuccessfulbuild".
+          Touching "cmTC_fbe6a.dir\\Debug\\cmTC_fbe6a.tlog\\cmTC_fbe6a.lastbuildstate".
+        Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-31c1pb\\cmTC_fbe6a.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.88
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "vendored/SDL/CMakeLists.txt:2241 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_MFAPI_H"
+    directories:
+      source: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-obr0vp"
+      binary: "C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-obr0vp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Programmering/Chladni-plate-sim/vendored/SDL/cmake"
+    buildResult:
+      variable: "HAVE_MFAPI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-obr0vp'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f3f6e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 2025-11-05 01:10:32.
+        
+        Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-obr0vp\\cmTC_f3f6e.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_f3f6e.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-obr0vp\\Debug\\".
+          Creating directory "cmTC_f3f6e.dir\\Debug\\cmTC_f3f6e.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_f3f6e.dir\\Debug\\cmTC_f3f6e.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_f3f6e.dir\\Debug\\cmTC_f3f6e.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_MFAPI_H /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f3f6e.dir\\Debug\\\\" /Fd"cmTC_f3f6e.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-obr0vp\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_MFAPI_H /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f3f6e.dir\\Debug\\\\" /Fd"cmTC_f3f6e.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-obr0vp\\src.c"
+          src.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-obr0vp\\Debug\\cmTC_f3f6e.exe" /INCREMENTAL /ILK:"cmTC_f3f6e.dir\\Debug\\cmTC_f3f6e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-obr0vp/Debug/cmTC_f3f6e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Programmering/Chladni-plate-sim/build/CMakeFiles/CMakeScratch/TryCompile-obr0vp/Debug/cmTC_f3f6e.lib" /MACHINE:X64  /machine:x64 cmTC_f3f6e.dir\\Debug\\src.obj
+          cmTC_f3f6e.vcxproj -> C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-obr0vp\\Debug\\cmTC_f3f6e.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_f3f6e.dir\\Debug\\cmTC_f3f6e.tlog\\unsuccessfulbuild".
+          Touching "cmTC_f3f6e.dir\\Debug\\cmTC_f3f6e.tlog\\cmTC_f3f6e.lastbuildstate".
+        Done Building Project "C:\\Programmering\\Chladni-plate-sim\\build\\CMakeFiles\\CMakeScratch\\TryCompile-obr0vp\\cmTC_f3f6e.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.06
+        
+      exitCode: 0
+...

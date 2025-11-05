@@ -1,0 +1,7 @@
+C:/Programmering/Chladni-plate-sim/build/CMakeFiles/chladni-plate-sim.dir
+C:/Programmering/Chladni-plate-sim/build/CMakeFiles/ALL_BUILD.dir
+C:/Programmering/Chladni-plate-sim/build/CMakeFiles/ZERO_CHECK.dir
+C:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir
+C:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3_test.dir
+C:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL_uclibc.dir
+C:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/ALL_BUILD.dir
