@@ -1,10 +1,24 @@
 #include "Sound.h"
+#include <thread>
+#include <chrono>
+#include <iostream>
+
+const int FRAMERATE = 60;
+
 int main(){
-    
-    static SDL_Window *window = NULL;
-    static SDL_Renderer *renderer = NULL;
+    Sound snd = Sound();
+    snd.setWaveform(WaveformType::Sawtooth);
+    snd.setFrequency(440);
+    snd.start();
 
-    SDL_CreateWindowAndRenderer("Chladni Plate Simulator", 800, 600, SDL_WINDOW_FULLSCREEN, &window, &renderer);
-    
+    bool running = true;
+    SDL_Event event;
+    while (running){
 
+        while(SDL_PollEvent(&event)){
+            if(event.type == SDL_EVENT_QUIT) running = false;
+        }
+
+        snd.tick();
+    }
 }

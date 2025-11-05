@@ -333,6 +333,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\Programmering\Chladni-plate-sim\src\Renderer.cpp" />
+    <ClCompile Include="C:\Programmering\Chladni-plate-sim\src\Sound.cpp" />
     <ClCompile Include="C:\Programmering\Chladni-plate-sim\src\main.cpp" />
   </ItemGroup>
   <ItemGroup />

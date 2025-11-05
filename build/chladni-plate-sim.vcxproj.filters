@@ -4,6 +4,9 @@
     <ClCompile Include="C:\Programmering\Chladni-plate-sim\src\Renderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Programmering\Chladni-plate-sim\src\Sound.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Programmering\Chladni-plate-sim\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
