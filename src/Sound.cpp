@@ -35,14 +35,11 @@ Sound::~Sound() {
 void Sound::start() {
     if (!SDL_ResumeAudioStreamDevice(stream_))
         throw std::runtime_error(std::string("SDL_ResumeAudioStreamDevice failed: ") + SDL_GetError());
-
-    std::cout << "started";
 }
 
 void Sound::stop()  { 
     if (!SDL_PauseAudioStreamDevice(stream_)) 
         throw std::runtime_error(std::string("SDL_PauseAudioStreamDevice failed: ") + SDL_GetError());
-    std::cout << "stopped";
 }
 
 void Sound::setFrequency(double f) { frequency_.store(f); }
