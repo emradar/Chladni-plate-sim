@@ -1,5 +1,6 @@
 #include "Sound.h"
 #include "Object.h"
+#include "Button.h"
 #include <thread>
 #include <chrono>
 #include <iostream>
@@ -8,17 +9,21 @@ const int FRAMERATE = 60;
 
 int main(){
 
+    int screenW, screenH;
+    float buttonW = 400, buttonH = 200;
+    
+    SDL_Init(SDL_INIT_VIDEO);
     SDL_Window *window = SDL_CreateWindow("Chladni Plate Simulator", 800, 700, SDL_WINDOW_FULLSCREEN);
     SDL_Renderer *renderer = SDL_CreateRenderer(window, NULL);
+    
+    SDL_GetWindowSize(window, &screenW, &screenH);
+    float buttonX = screenW-buttonW, buttonY = screenH-buttonH;
 
-    SDL_Init(SDL_INIT_VIDEO);
-
+    Button playButton = Button(buttonX, buttonY, buttonW, buttonH);
     Object square = Object(Shape::Square, 500.0, 500.0);
     Sound snd = Sound();
-    snd.setWaveform(WaveformType::Sawtooth);
     snd.setFrequency(440);
     snd.setAmplitude(0.2);
-    snd.start();
 
     bool running = true;
     
@@ -30,6 +35,17 @@ int main(){
                 case SDL_EVENT_QUIT:
                     running = false;
                     snd.stop();
+                    break;
+                case SDL_EVENT_MOUSE_BUTTON_DOWN:
+                    if(playButton.handleEvent(e)){
+                        static bool playing = false;
+                        if(playing){
+                            snd.stop();
+                        } else {
+                            snd.start();
+                        }
+                        playing = !playing;
+                    }
                     break;
                 case SDL_EVENT_KEY_DOWN:
                     auto& key = e.key.key;
@@ -45,10 +61,11 @@ int main(){
         SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
         SDL_RenderClear(renderer);
 
-        snd.tick();
-        square.drawShape(renderer);
+        square.draw(renderer);
+        playButton.draw(renderer);
 
-        SDL_UpdateWindowSurface(window);
+        snd.tick();
+        SDL_RenderPresent(renderer);
     }
 
     SDL_DestroyRenderer(renderer);

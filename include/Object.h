@@ -18,7 +18,7 @@ class Object {
         float getHeight(){return height_;}
         float getWidth(){return width_;}
 
-        void drawShape(SDL_Renderer *renderer);
+        void draw(SDL_Renderer *renderer);
     private:
         Shape shape_;
         float height_;

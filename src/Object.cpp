@@ -3,7 +3,7 @@
 Object::Object(Shape s, float h, float w):shape_(s), height_(h), width_(w){
 }
 
-void Object::drawShape(SDL_Renderer *renderer){
+void Object::draw(SDL_Renderer *renderer){
     SDL_Window *window = SDL_GetRenderWindow(renderer);
 
     int screenW, screenH;
@@ -16,6 +16,4 @@ void Object::drawShape(SDL_Renderer *renderer){
 
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0xFF);
     SDL_RenderFillRect(renderer, &rect);
-
-    SDL_RenderPresent(renderer);
 }
