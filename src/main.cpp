@@ -1,6 +1,7 @@
 #include "Sound.h"
 #include "Object.h"
-#include "Button.h"
+#include "PlayButton.h"
+#include "Slider.h"
 #include <thread>
 #include <chrono>
 #include <iostream>
@@ -11,15 +12,22 @@ int main(){
 
     int screenW, screenH;
     float buttonW = 50, buttonH = 50;
-    
+    float sliderW = 200, sliderH = 50;
+
+    float margin = 20.0f;
+
     SDL_Init(SDL_INIT_VIDEO);
     SDL_Window *window = SDL_CreateWindow("Chladni Plate Simulator", 800, 700, SDL_WINDOW_FULLSCREEN);
     SDL_Renderer *renderer = SDL_CreateRenderer(window, NULL);
     
     SDL_GetWindowSize(window, &screenW, &screenH);
-    float buttonX = screenW-buttonW, buttonY = screenH-buttonH;
+    float buttonX = screenW-buttonW-margin, buttonY = screenH-buttonH-margin;
+    float freqX = screenW-sliderW-margin, freqY = buttonY-sliderH-margin;
+    float ampX = freqX, ampY = freqY-sliderH-margin;
 
-    Button playButton = Button(buttonX, buttonY, buttonW, buttonH);
+    PlayButton playButton = PlayButton(renderer, buttonX, buttonY, buttonW, buttonH, 50, 50, 50, 255);
+    Slider freqSlider = Slider(renderer, freqX, freqY, sliderW, sliderH, 20.0f, 20000.0f, 50, 50, 50, 255);
+    Slider ampSlider = Slider(renderer, ampX, ampY, sliderW, sliderH, 0.0f, 1.0f, 50, 50, 50, 255);
     Object square = Object(Shape::Square, 500.0, 500.0);
     Sound snd = Sound();
     snd.setFrequency(440);
@@ -42,6 +50,13 @@ int main(){
                         playing ? snd.stop() : snd.start();
                         playing = !playing;
                     }
+
+                    if(freqSlider.handleEvent(e))
+                        snd.setFrequency(freqSlider.getValue());
+                    
+                    if(ampSlider.handleEvent(e))
+                        snd.setAmplitude(ampSlider.getValue());
+                        
                     break;
                 case SDL_EVENT_KEY_DOWN:
                     auto& key = e.key.key;
@@ -63,8 +78,9 @@ int main(){
         SDL_RenderClear(renderer);
 
         square.draw(renderer);
-        playButton.draw(renderer);
-
+        playButton.draw();
+        freqSlider.draw();
+        ampSlider.draw();
         snd.tick();
         SDL_RenderPresent(renderer);
     }
