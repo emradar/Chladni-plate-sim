@@ -51,10 +51,9 @@ int main(){
                             snd.stop();
                             break;
                         case SDLK_SPACE:
-                            if(playButton.handleEvent(e)){
-                                playing ? snd.stop() : snd.start();
-                                playing = !playing;
-                            }
+                            playing ? snd.stop() : snd.start();
+                            playButton.togglePressed();
+                            playing = !playing;
                             break;
                     }
             }

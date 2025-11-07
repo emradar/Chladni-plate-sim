@@ -6,8 +6,8 @@ bool Button::handleEvent(const SDL_Event &e) {
     float mx = e.button.x;
     float my = e.button.y;
 
-    if (e.key.key == SDLK_SPACE || (mx >= x_ && mx <= x_+width_ && my >= y_ && my <= y_+height_)) {
-        pressed_ = !pressed_;
+    if (mx >= x_ && mx <= x_+width_ && my >= y_ && my <= y_+height_) {
+        togglePressed();
         return true;
     }
 
