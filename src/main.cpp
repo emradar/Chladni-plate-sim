@@ -30,8 +30,6 @@ int main(){
     Slider ampSlider = Slider(renderer, ampX, ampY, sliderW, sliderH, 20, 0.0f, 1.0f, 50, 50, 50, 255);
     Object square = Object(Shape::Square, 500.0, 500.0);
     Sound snd = Sound();
-    snd.setFrequency(440);
-    snd.setAmplitude(0.2);
 
     bool running = true;
     

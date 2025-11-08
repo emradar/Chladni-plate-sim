@@ -15,15 +15,15 @@ Sound::Sound(std::vector<int> origin, std::vector<int> time, double amp, double 
 
 Sound::Sound(WaveformType wform){
     setWaveform(wform);
-    amplitude_.store(0.5);
-    frequency_.store(440);
+    amplitude_.store(0.01);
+    frequency_.store(1);
     initStream();  
 }
 
 Sound::Sound(){
     setWaveform(WaveformType::Sine);
-    amplitude_.store(0.5);
-    frequency_.store(440);
+    amplitude_.store(0.01);
+    frequency_.store(1);
     initStream();    
 }
 
@@ -50,38 +50,40 @@ void setOrigin();
 void Sound::setWaveform(WaveformType type){
     switch (type) {
         case WaveformType::Sine:
-            waveform_ = [](double t, double f) {
-                return static_cast<float>(std::sin(2.0 * SDL_PI_D * f * t));
+            waveform_ = [](double phase) {
+                return static_cast<float>(std::sin(phase));
             };
             break;
         case WaveformType::Square:
-            waveform_ = [](double t, double f) {
+            waveform_ = [](double phase) {
                 return static_cast<float>(
-                    (std::sin(2.0 * SDL_PI_D * f * t) >= 0.0) ? 1.0f : -1.0f
+                    (std::sin(phase) >= 0.0) ? 1.0f : -1.0f
                 );
             };
             break;
         case WaveformType::Triangle:
-            waveform_ = [](double t, double f) {
-                double val = 2.0 * std::abs(2.0 * (t * f - std::floor(t * f + 0.5))) - 1.0;
-                return static_cast<float>(val);
+            waveform_ = [](double phase) {
+                double p = phase /(2.0 * SDL_PI_D);
+                return static_cast<float>(2.0 * std::abs(2.0 * (p - std::floor(p + 0.5))) - 1.0);
             };
             break;
         case WaveformType::Sawtooth:
-            waveform_ = [](double t, double f) {
-                double val = 2.0 * (t * f - std::floor(t * f + 0.5));
-                return static_cast<float>(val);
+            waveform_ = [](double phase) {
+                double p = phase / (2.0 * SDL_PI_D);
+                return static_cast<float>(2.0 * (p - std::floor(p + 0.5)));
             };
             break;
         case WaveformType::Noise:
-            waveform_ = [](double, double) {
+            waveform_ = [](double phase) {
                 static thread_local std::mt19937 rng{std::random_device{}()};
                 static std::uniform_real_distribution<float> dist(-1.0f, 1.0f);
                 return dist(rng);
             };
             break;
         default:
-            waveform_ = [](double t, double f) { return static_cast<float>(std::sin(2.0 * SDL_PI_D * f * t)); };
+            waveform_ = [](double phase) { 
+                return static_cast<float>(std::sin(phase)); 
+            };
             break;
     }
 }
@@ -92,20 +94,20 @@ void Sound::tick(){
     const double fs = samplerate_;
     const double amp = amplitude_.load();
     const double freq = frequency_.load();
-    double phase = phase_;
 
     const int min_audio = (int)((fs * sizeof(float)) / 2);
     if (SDL_GetAudioStreamQueued(stream_) < min_audio) {
         for (int i = 0; i < frame_count; ++i) {
-            double t = phase / fs;
-            float sample = static_cast<float>(amp * waveform_(t, freq));
-            buffer[2 * i + 0] = sample;
-            buffer[2 * i + 1] = sample;
-            phase += 1.0;
-            if (phase >= fs) phase -= fs;
+            double phaseInc = 2.0 * SDL_PI_D * freq / fs;
+            phase_ += phaseInc;
+            if (phase_ >= 2.0 * SDL_PI_D) phase_ -= 2.0 * SDL_PI_D;
+        
+            float sample = static_cast<float>(amp * waveform_(phase_));
+            buffer[2*i + 0] = sample;
+            buffer[2*i + 1] = sample;
         }
+        
         SDL_PutAudioStreamData(stream_, buffer, sizeof(buffer));
-        phase_ = phase;
     }
 }
 

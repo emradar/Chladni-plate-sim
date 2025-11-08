@@ -19,7 +19,7 @@ class Sound{
 
     public:
 
-        using WaveformFunc = std::function<float(double t, double freq)>;
+        using WaveformFunc = std::function<float(double phase)>;
 
         Sound(std::vector<int> origin, std::vector<int> time, double amp, double freq, double wave, WaveformType wform);
         Sound();
