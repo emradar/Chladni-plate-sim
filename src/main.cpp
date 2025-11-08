@@ -26,8 +26,8 @@ int main(){
     float ampX = freqX, ampY = freqY-sliderH-margin;
 
     PlayButton playButton = PlayButton(renderer, buttonX, buttonY, buttonW, buttonH, 50, 50, 50, 255);
-    Slider freqSlider = Slider(renderer, freqX, freqY, sliderW, sliderH, 20.0f, 20000.0f, 50, 50, 50, 255);
-    Slider ampSlider = Slider(renderer, ampX, ampY, sliderW, sliderH, 0.0f, 1.0f, 50, 50, 50, 255);
+    Slider freqSlider = Slider(renderer, freqX, freqY, sliderW, sliderH, 20, 20.0f, 4000.0f, 50, 50, 50, 255);
+    Slider ampSlider = Slider(renderer, ampX, ampY, sliderW, sliderH, 20, 0.0f, 1.0f, 50, 50, 50, 255);
     Object square = Object(Shape::Square, 500.0, 500.0);
     Sound snd = Sound();
     snd.setFrequency(440);
@@ -51,6 +51,8 @@ int main(){
                         playing = !playing;
                     }
 
+                case SDL_EVENT_MOUSE_BUTTON_UP:
+                case SDL_EVENT_MOUSE_MOTION:
                     if(freqSlider.handleEvent(e))
                         snd.setFrequency(freqSlider.getValue());
                     

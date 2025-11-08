@@ -2,30 +2,59 @@
 #include "Sound.h"
 
 bool Slider::handleEvent(const SDL_Event &e) {
-    float mx = e.button.x;
-    float my = e.button.y;
     bool changed = false;
 
-    if (mx >= x_ && mx <= x_ + width_ && my >= y_ && my <= y_) {
-        float t = (mx - x_) / width_;
-        value_ = minValue_ + t * (maxValue_ - minValue_);
-        changed = true;
+    float normalizedVal = (value_ - minValue_) / (maxValue_ - minValue_);
+    float knobX = x_ + borderRadius_ + (width_ - 2 * borderRadius_) * normalizedVal;
+    float knobY = y_ + height_ / 2.0f;
+    float knobRadius = borderRadius_ / 2.0f;
+
+    switch (e.type) {
+        case SDL_EVENT_MOUSE_BUTTON_DOWN: {
+            float mx = e.button.x;
+            float my = e.button.y;
+
+            float dx = mx - knobX;
+            float dy = my - knobY;
+            float distance = std::sqrt(dx * dx + dy * dy);
+
+            if (distance <= knobRadius) {
+                dragging_ = true;
+                changed = true;
+            }
+            break;
+        }
+
+        case SDL_EVENT_MOUSE_BUTTON_UP:
+            dragging_ = false;
+            break;
+
+        case SDL_EVENT_MOUSE_MOTION:
+            if (dragging_) {
+                float mx = e.motion.x;
+                float t = (mx - x_ - borderRadius_) / (width_ - 2 * borderRadius_);
+                t = std::clamp(t, 0.0f, 1.0f);
+                value_ = minValue_ + t * (maxValue_ - minValue_);
+                changed = true;
+            }
+            break;
     }
 
     return changed;
 }
 
+
 void Slider::draw(){
-    float borderRadius = 20;
     SDL_SetRenderDrawColor(renderer_, r_, g_, b_, a_);
-    drawRoundedRect(renderer_, borderRadius);
+    drawRoundedRect(renderer_, borderRadius_);
     SDL_SetRenderDrawColor(renderer_, 128, 20, 40, 255);
 
-    float effectiveX = x_+borderRadius;
+    float effectiveX = x_+borderRadius_;
     float effectiveY = y_+(height_-height_/5)/2;
-    float usableWidth = width_ - 2*borderRadius;
-    SDL_FRect bar = {effectiveX, effectiveY, usableWidth * value_, height_/5};
-    drawFilledCircle(renderer_, effectiveX + usableWidth * value_, effectiveY + (height_/5)/2, borderRadius/2);
+    float normalizedVal = (value_ - minValue_) / (maxValue_ - minValue_);
+    float usableWidth = (width_ - 2*borderRadius_) * normalizedVal;
+    SDL_FRect bar = {effectiveX, effectiveY, usableWidth, height_/5};
+    drawFilledCircle(renderer_, effectiveX + usableWidth, effectiveY + (height_/5)/2, borderRadius_/2);
     
     SDL_RenderFillRect(renderer_, &bar);
 }

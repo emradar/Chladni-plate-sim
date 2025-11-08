@@ -91,14 +91,14 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "ALL_BUILD::@8fb704815aaca498baa2",
-					"jsonFile" : "target-ALL_BUILD-Debug-b8dd0ea3c9c48f480798.json",
+					"jsonFile" : "target-ALL_BUILD-Debug-8e57c18f56a3380cb320.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "SDL3-shared::@8fb704815aaca498baa2",
-					"jsonFile" : "target-SDL3-shared-Debug-92350d0fc5e5d1f4a3fc.json",
+					"jsonFile" : "target-SDL3-shared-Debug-8033311a4684ecc82fdd.json",
 					"name" : "SDL3-shared",
 					"projectIndex" : 1
 				},
@@ -126,7 +126,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "chladni-plate-sim::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-chladni-plate-sim-Debug-ba9963fcb8b97cd77441.json",
+					"jsonFile" : "target-chladni-plate-sim-Debug-3f9880cc3b3e7e6e01e3.json",
 					"name" : "chladni-plate-sim",
 					"projectIndex" : 0
 				}
@@ -222,14 +222,14 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "ALL_BUILD::@8fb704815aaca498baa2",
-					"jsonFile" : "target-ALL_BUILD-Release-b8dd0ea3c9c48f480798.json",
+					"jsonFile" : "target-ALL_BUILD-Release-8e57c18f56a3380cb320.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "SDL3-shared::@8fb704815aaca498baa2",
-					"jsonFile" : "target-SDL3-shared-Release-eb1eb609d13f90bbeb41.json",
+					"jsonFile" : "target-SDL3-shared-Release-308662db5d027d4ad3b7.json",
 					"name" : "SDL3-shared",
 					"projectIndex" : 1
 				},
@@ -257,7 +257,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "chladni-plate-sim::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-chladni-plate-sim-Release-e3f9122903616cfd7a8f.json",
+					"jsonFile" : "target-chladni-plate-sim-Release-dc2c040ee97da2a0cde2.json",
 					"name" : "chladni-plate-sim",
 					"projectIndex" : 0
 				}
@@ -353,14 +353,14 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "ALL_BUILD::@8fb704815aaca498baa2",
-					"jsonFile" : "target-ALL_BUILD-MinSizeRel-b8dd0ea3c9c48f480798.json",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-8e57c18f56a3380cb320.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "SDL3-shared::@8fb704815aaca498baa2",
-					"jsonFile" : "target-SDL3-shared-MinSizeRel-307056c161f27a28b745.json",
+					"jsonFile" : "target-SDL3-shared-MinSizeRel-23e7c67fcb0f265bf206.json",
 					"name" : "SDL3-shared",
 					"projectIndex" : 1
 				},
@@ -388,7 +388,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "chladni-plate-sim::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-chladni-plate-sim-MinSizeRel-37545b1911d2c97ccd6f.json",
+					"jsonFile" : "target-chladni-plate-sim-MinSizeRel-8009de79e9c6de9db5a4.json",
 					"name" : "chladni-plate-sim",
 					"projectIndex" : 0
 				}
@@ -484,14 +484,14 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "ALL_BUILD::@8fb704815aaca498baa2",
-					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-b8dd0ea3c9c48f480798.json",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-8e57c18f56a3380cb320.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "SDL3-shared::@8fb704815aaca498baa2",
-					"jsonFile" : "target-SDL3-shared-RelWithDebInfo-2d9215de64b96a75e909.json",
+					"jsonFile" : "target-SDL3-shared-RelWithDebInfo-d29161190cc1817479ac.json",
 					"name" : "SDL3-shared",
 					"projectIndex" : 1
 				},
@@ -519,7 +519,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "chladni-plate-sim::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-chladni-plate-sim-RelWithDebInfo-994291c6881e2cc67209.json",
+					"jsonFile" : "target-chladni-plate-sim-RelWithDebInfo-bac8e3e25437fa94fa0f.json",
 					"name" : "chladni-plate-sim",
 					"projectIndex" : 0
 				}
