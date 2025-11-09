@@ -1,5 +1,30 @@
 #include "Slider.h"
-#include "Sound.h"
+#include <glad/glad.h>
+#include <GL/gl.h>
+#include <algorithm>
+#include <vector>
+#include <cmath>
+
+Slider::Slider(GLuint shaderProgram, float x, float y, float w, float h, int borderR, float minVal, float maxVal, const std::array<Uint8, 4> color)
+: shaderProgram_(shaderProgram), x_(x), y_(y), width_(w), height_(h), borderRadius_(borderR), minValue_(minVal), maxValue_(maxVal), color_(color){
+    initBuffers(); 
+}
+
+Slider::~Slider(){
+    if (vbo_) glDeleteBuffers(1, &vbo_);
+    if (vao_) glDeleteVertexArrays(1, &vao_);
+}
+
+void Slider::initBuffers(){
+    glGenVertexArrays(1, &vao_);
+    glGenBuffers(1, &vbo_);
+    glBindVertexArray(vao_);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo_);
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2*sizeof(float), (void*)0);
+    glBindVertexArray(0);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+}
 
 bool Slider::handleEvent(const SDL_Event &e) {
     bool changed = false;
@@ -43,46 +68,56 @@ bool Slider::handleEvent(const SDL_Event &e) {
     return changed;
 }
 
-
-void Slider::draw(){
-    SDL_SetRenderDrawColor(renderer_, r_, g_, b_, a_);
-    drawRoundedRect(renderer_, borderRadius_);
-    SDL_SetRenderDrawColor(renderer_, 128, 20, 40, 255);
-
-    float effectiveX = x_+borderRadius_;
-    float effectiveY = y_+(height_-height_/5)/2;
-    float normalizedVal = (value_ - minValue_) / (maxValue_ - minValue_);
-    float usableWidth = (width_ - 2*borderRadius_) * normalizedVal;
-    SDL_FRect bar = {effectiveX, effectiveY, usableWidth, height_/5};
-    drawFilledCircle(renderer_, effectiveX + usableWidth, effectiveY + (height_/5)/2, borderRadius_/2);
+void Slider::draw(int screenW, int screenH) {
+    glUseProgram(shaderProgram_);
     
-    SDL_RenderFillRect(renderer_, &bar);
-}
+    GLint resLoc = glGetUniformLocation(shaderProgram_, "uResolution");
+    glUniform2f(resLoc, (float)screenW, (float)screenH);
+    GLint colorLoc = glGetUniformLocation(shaderProgram_, "uColor");
 
-void Slider::drawRoundedRect(SDL_Renderer* renderer, float radius) {
-    // main rectangle
-    SDL_FRect center = { x_ + radius, y_, width_ - 2*radius, height_ };
-    SDL_RenderFillRect(renderer, &center);
+    // background
+    std::vector<float> bg = { x_, y_, x_ + width_, y_, x_ + width_, y_ + height_, x_, y_ + height_ };
 
-    // left and right rectangles
-    SDL_FRect left = { x_, y_ + radius, radius, height_ - 2*radius };
-    SDL_FRect right = { x_ + width_ - radius, y_ + radius, radius, height_ - 2*radius };
-    SDL_RenderFillRect(renderer, &left);
-    SDL_RenderFillRect(renderer, &right);
+    // bar
+    float normalized = (value_ - minValue_) / (maxValue_ - minValue_);
+    float usable = (width_ - 2*borderRadius_) * normalized;
+    float barX = x_ + borderRadius_;
+    std::vector<float> fg = { barX, y_ + (height_ - height_/5.0f)/2.0f,
+                              barX + usable, y_ + (height_ - height_/5.0f)/2.0f,
+                              barX + usable, y_ + (height_ - height_/5.0f)/2.0f + height_/5.0f,
+                              barX, y_ + (height_ - height_/5.0f)/2.0f + height_/5.0f };
 
-    // circles for each corner
-    drawFilledCircle(renderer, x_ + radius,         y_ + radius,         radius);  // top-left
-    drawFilledCircle(renderer, x_ + width_ - radius, y_ + radius,         radius);  // top-right
-    drawFilledCircle(renderer, x_ + radius,         y_ + height_ - radius, radius); // bottom-left
-    drawFilledCircle(renderer, x_ + width_ - radius, y_ + height_ - radius, radius);// bottom-right
-}
-
-void Slider::drawFilledCircle(SDL_Renderer* renderer, float cx, float cy, float r) {
-    float r2 = r * r;
-
-    for (float dy = -r; dy <= r; dy += 1.0f) {
-        float dx = std::sqrt(r2 - dy*dy);  // horizontal half-width
-        // draw horizontal line at this dy
-        SDL_RenderLine(renderer, cx - dx, cy + dy, cx + dx, cy + dy);
+    // knob
+    std::vector<float> knob;
+    float cx = x_+borderRadius_+usable;
+    float cy = y_ + height_/2;
+    float r = borderRadius_/2;
+    int segments = 32;
+    knob.push_back(cx);
+    knob.push_back(cy);
+    for(int i = 0; i <= segments; ++i){
+        float angle = i * 2 * SDL_PI_F / segments;
+        knob.push_back(cx + r * cos(angle));
+        knob.push_back(cy + r * sin(angle));
     }
+
+    // background
+    glUniform4f(colorLoc, color_[0]/255.f, color_[1]/255.f, color_[2]/255.f, color_[3]/255.f);
+    glBindVertexArray(vao_);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo_);
+    glBufferData(GL_ARRAY_BUFFER, bg.size()*sizeof(float), bg.data(), GL_DYNAMIC_DRAW);
+    glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
+
+    // bar
+    glUniform4f(colorLoc, 0.5f, 0.08f, 0.16f, 1.0f);
+    glBufferData(GL_ARRAY_BUFFER, fg.size()*sizeof(float), fg.data(), GL_DYNAMIC_DRAW);
+    glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
+
+    // knob
+    glUniform4f(colorLoc, 0.8f, 0.8f, 0.8f, 1.0f);
+    glBufferData(GL_ARRAY_BUFFER, knob.size()*sizeof(float), knob.data(), GL_DYNAMIC_DRAW);
+    glDrawArrays(GL_TRIANGLE_FAN, 0, (GLsizei)knob.size()/2);
+
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
 }

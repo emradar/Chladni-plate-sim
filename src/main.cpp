@@ -1,7 +1,9 @@
+#include <glad/glad.h>
 #include "Sound.h"
 #include "Object.h"
 #include "PlayButton.h"
 #include "Slider.h"
+#include "UIShaders.h"
 #include <thread>
 #include <chrono>
 #include <iostream>
@@ -10,29 +12,73 @@ const int FRAMERATE = 60;
 
 int main(){
 
+    if (!SDL_Init(SDL_INIT_VIDEO)) {
+        std::cerr << "SDL_Init Error: " << SDL_GetError() << "\n";
+        return -1;
+    }
+
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
+
+    SDL_Window* window = SDL_CreateWindow(
+        "Chladni Plate Simulator",
+        1280, 720,
+        SDL_WINDOW_OPENGL
+    );
+
+    if(!window){
+        std::cerr << "Failed to create window\n" << SDL_GetError()<<" \n";
+        return -1;
+    }
+
+    SDL_GLContext glContext = SDL_GL_CreateContext(window);
+    if(!glContext){
+        std::cerr << "Failed to create OpenGL context\n" << SDL_GetError() << "\n";
+        return -1;
+    }
+
+    if (!SDL_GL_MakeCurrent(window, glContext)) {
+        std::cerr << "Failed to make context current: " << SDL_GetError() << "\n";
+        return -1;
+    }
+
+    if(!gladLoadGLLoader((GLADloadproc)SDL_GL_GetProcAddress)){
+        std::cerr << "Failed to initialize GLAD\n" << SDL_GetError() << "\n";
+        return -1;
+    }
+
     int screenW, screenH;
+    SDL_GetWindowSize(window, &screenW, &screenH);
+    glViewport(0, 0, screenW, screenH);
+
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glEnable(GL_PROGRAM_POINT_SIZE);
+    glPointSize(2.0f);
+
+    GLuint shader = createUIProgram();
+
+    // setting element dimensions
+    float objectW = 500, objectH = 500;
     float buttonW = 50, buttonH = 50;
     float sliderW = 200, sliderH = 50;
-
-    float margin = 20.0f;
-
-    SDL_Init(SDL_INIT_VIDEO);
-    SDL_Window *window = SDL_CreateWindow("Chladni Plate Simulator", 800, 700, SDL_WINDOW_FULLSCREEN);
-    SDL_Renderer *renderer = SDL_CreateRenderer(window, NULL);
+    float margin = 20.0f;  
     
-    SDL_GetWindowSize(window, &screenW, &screenH);
     float buttonX = screenW-buttonW-margin, buttonY = screenH-buttonH-margin;
     float freqX = screenW-sliderW-margin, freqY = buttonY-sliderH-margin;
     float ampX = freqX, ampY = freqY-sliderH-margin;
+    float objectX = (screenW-objectW)/2, objectY = (screenH-objectH)/2;
 
-    PlayButton playButton = PlayButton(renderer, buttonX, buttonY, buttonW, buttonH, 50, 50, 50, 255);
-    Slider freqSlider = Slider(renderer, freqX, freqY, sliderW, sliderH, 20, 20.0f, 4000.0f, 50, 50, 50, 255);
-    Slider ampSlider = Slider(renderer, ampX, ampY, sliderW, sliderH, 20, 0.0f, 1.0f, 50, 50, 50, 255);
-    Object square = Object(Shape::Square, 500.0, 500.0);
+    const std::array<Uint8, 4> gray = {50, 50, 50, 255};
+    PlayButton playButton = PlayButton(shader, buttonX, buttonY, buttonW, buttonH, gray);
+    Slider freqSlider = Slider(shader, freqX, freqY, sliderW, sliderH, 20, 20.0f, 4000.0f, gray);
+    Slider ampSlider = Slider(shader, ampX, ampY, sliderW, sliderH, 20, 0.0f, 1.0f, gray);
+    Object object = Object(shader, Shape::Square, objectX, objectY, objectW, objectH, 200);
     Sound snd = Sound();
 
     bool running = true;
-    
+    Uint64 last = SDL_GetTicks();
     while (running){
 
         SDL_Event e;
@@ -74,19 +120,29 @@ int main(){
             }
         }
 
-        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-        SDL_RenderClear(renderer);
+        Uint64 now = SDL_GetTicks();
+        float dt = (now-last) / 1000.0f;
+        last = now;
+        double t = now /1000.0;
 
-        square.draw(renderer);
-        playButton.draw();
-        freqSlider.draw();
-        ampSlider.draw();
+        object.update(snd, dt);
         snd.tick();
-        SDL_RenderPresent(renderer);
+
+        SDL_GetWindowSize(window, &screenW, &screenH);
+        glViewport(0, 0, screenW, screenH);
+        glClearColor(1,1,1,1);
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        object.draw(screenW, screenH);
+        playButton.draw(screenW, screenH);
+        freqSlider.draw(screenW, screenH);
+        ampSlider.draw(screenW, screenH);
+
+        SDL_GL_SwapWindow(window);        
     }
 
-    SDL_DestroyRenderer(renderer);
+    SDL_GL_DestroyContext(glContext);
     SDL_DestroyWindow(window);
-
     SDL_Quit();
+    return 0;
 }

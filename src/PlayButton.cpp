@@ -1,5 +1,26 @@
 #include "PlayButton.h"
-#include "Sound.h"
+
+PlayButton::PlayButton(GLuint shaderProgram, float x, float y, float w, float h, const std::array<Uint8,4>& color)
+: shaderProgram_(shaderProgram), x_(x), y_(y), width_(w), height_(h), color_(color){
+
+    initBuffers();
+}
+
+PlayButton::~PlayButton(){
+    if (vbo_) glDeleteBuffers(1, &vbo_);
+    if (vao_) glDeleteVertexArrays(1, &vao_);
+}
+
+void PlayButton::initBuffers() {
+    glGenVertexArrays(1, &vao_);
+    glGenBuffers(1, &vbo_);
+    glBindVertexArray(vao_);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo_);
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2*sizeof(float), (void*)0);
+    glBindVertexArray(0);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+}
 
 bool PlayButton::handleEvent(const SDL_Event &e) {
 
@@ -14,24 +35,44 @@ bool PlayButton::handleEvent(const SDL_Event &e) {
     return false;
 }
 
-void PlayButton::draw(){
+void PlayButton::draw(int screenW, int screenH) {
 
-    SDL_SetRenderDrawColor(renderer_, r_, g_, b_, a_);
-   
-    if(pressed_){
-        // draw a pause button (two rectangles)
-        SDL_FRect rect1 = {x_, y_, width_/5, height_};   
-        SDL_FRect rect2 = {x_+width_/5*3, y_, width_/5, height_};
-        SDL_RenderFillRect(renderer_, &rect1);
-        SDL_RenderFillRect(renderer_, &rect2);
-    } else {
-        // draw a play button (triangle)
-        SDL_Vertex verts[3] = {
-            { SDL_FPoint{ x_, y_ },           SDL_FColor{r_/255.0f, g_/255.0f, b_/255.0f, 1.0f}, SDL_FPoint{0,0} },
-            { SDL_FPoint{ x_, y_ + height_ }, SDL_FColor{r_/255.0f, g_/255.0f, b_/255.0f, 1.0f}, SDL_FPoint{0,0} },
-            { SDL_FPoint{ x_ + width_, y_ + height_/2 }, SDL_FColor{r_/255.0f, g_/255.0f, b_/255.0f, 1.0f}, SDL_FPoint{0,0} }
+    glUseProgram(shaderProgram_);
+
+    GLint resLoc = glGetUniformLocation(shaderProgram_, "uResolution");
+    glUniform2f(resLoc, (float)screenW, (float)screenH);
+    GLint colorLoc = glGetUniformLocation(shaderProgram_, "uColor");
+    glUniform4f(colorLoc,
+                color_[0]/255.0f,
+                color_[1]/255.0f,
+                color_[2]/255.0f,
+                color_[3]/255.0f);
+
+    std::vector<float> verts;
+    if (pressed_) {
+        float barW = width_/5.0f;
+        verts = {
+            x_, y_, x_+barW, y_, x_+barW, y_+height_,
+            x_, y_, x_+barW, y_+height_, x_, y_+height_,
+
+            x_+3*barW, y_, x_+4*barW, y_, x_+4*barW, y_+height_,
+            x_+3*barW, y_, x_+4*barW, y_+height_, x_+3*barW, y_+height_
         };
-        
-        SDL_RenderGeometry(renderer_, nullptr, verts, 3, nullptr, 0);
+    } else {
+        verts = { x_, y_, x_, y_+height_, x_+width_, y_+height_/2.0f };
     }
+
+    glBindVertexArray(vao_);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo_);
+    glBufferData(GL_ARRAY_BUFFER, verts.size()*sizeof(float), verts.data(), GL_DYNAMIC_DRAW);
+
+    if (pressed_)
+        glDrawArrays(GL_TRIANGLES, 0, (GLsizei)verts.size()/2);
+    else
+        glDrawArrays(GL_TRIANGLES, 0, 3);
+
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
 }
+
+

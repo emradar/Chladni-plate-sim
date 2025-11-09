@@ -1,25 +1,28 @@
 #pragma once
 #include "SDL3/SDL.h"
+#include <array>
+#include <glad/glad.h>
 
 class Slider{
     public:
 
-        Slider(SDL_Renderer *renderer, float x, float y, float w, float h, float borderR, float minVal, float maxVal, Uint8 r, Uint8 g, Uint8 b, Uint8 a)
-        : renderer_(renderer), x_(x), y_(y), width_(w), height_(h), borderRadius_(borderR), minValue_(minVal), maxValue_(maxVal), r_(r), g_(g), b_(b), a_(a){};
+        Slider(GLuint shaderProgram, float x, float y, float w, float h, int borderR, float minVal, float maxVal, const std::array<Uint8, 4> color);
+        ~Slider();
 
         bool handleEvent(const SDL_Event &e);
-        void draw();
+        void draw(int screenW, int screenH);
 
         float getValue(){return value_;};
 
     private:
-        SDL_Renderer *renderer_;
-        float x_, y_, width_, height_, borderRadius_;
+        GLuint shaderProgram_;
+        float x_, y_, width_, height_;
+        int borderRadius_;
         float minValue_, maxValue_;
-        float value_= 0;
-        Uint8 r_, g_, b_, a_;
+        float value_= 0.0f;
+        std::array<Uint8, 4> color_;
         bool dragging_ = false;
+        unsigned int vbo_ = 0, vao_ = 0;
 
-        void drawRoundedRect(SDL_Renderer* renderer, float radius);
-        void drawFilledCircle(SDL_Renderer* renderer, float cx, float cy, float r);
+        void initBuffers();
 };
