@@ -71,31 +71,44 @@ void Object::initBuffers(){
 
 }
 
+/**
+ * Uses the mode shape function of w(x,y)=sin((mπx)/W)​⋅sin((nπy)/H)
+ * and force toward nodes with F=−w(x,y)∇w(x,y)
+ */
 void Object::update(const Sound &snd, float dt) {
     double freq = snd.getFrequency();
-    double omega = 2.0 * SDL_PI_D * freq;
+    double amp = snd.getAmplitude();
+    double omega = 2 * SDL_PI_D * freq;
+    static double time = 0.0;
+    time += dt;
 
-    int nx = std::clamp(int(freq / 200.0), 1, 10);
-    int ny = std::clamp(int(freq / 300.0), 1, 10);
+    int mx = std::clamp(int(freq / 200.0), 1, 10); // mode number x-axis 
+    int my = std::clamp(int(freq / 300.0), 1, 10); // mode number y-axis
 
-    double kx = nx * SDL_PI_D / width_;
-    double ky = ny * SDL_PI_D / height_;
-
-    const float forceStrength = 50.0f;
-    const float damping = 0.9f;
+    const float forceStrength = 150.0f;
+    const float damping = 0.99f;
 
     for(size_t i = 0; i < particles_.size(); ++i){
         Particle &p = particles_[i];
 
         // mode at origin
-        float modeValue = float(std::sin(kx * p.originX) * std::sin(ky * p.originY));
+        float w = std::sin((mx * SDL_PI_F * (p.x - x_))/width_) * 
+                            std::sin((my * SDL_PI_F * (p.y - y_))/height_);
+
+        float dwdx = (((mx * SDL_PI_F) / width_) * 
+                    std::cos((mx * SDL_PI_F * (p.x - x_)) / width_) * 
+                    sin((my * SDL_PI_F * (p.y - y_)) / height_));
+
+        float dwdy = (((my*SDL_PI_F)/height_)*
+                    std::sin((mx * SDL_PI_F * (p.x - x_)) / width_) *
+                    std::cos((my * SDL_PI_F * (p.y - y_)) / height_));
 
         // force toward node (modeValue = 0)
-        float fx = -modeValue * float(std::sin(kx * p.originX));
-        float fy = -modeValue * float(std::sin(ky * p.originY));
+        float fx = -w * dwdx; 
+        float fy = -w * dwdy;
 
-        p.velocityX += fx * dt * forceStrength;
-        p.velocityY += fy * dt * forceStrength;
+        p.velocityX += fx * forceStrength;
+        p.velocityY += fy * forceStrength;
 
         // damping
         p.velocityX *= damping;

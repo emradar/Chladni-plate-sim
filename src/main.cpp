@@ -72,8 +72,8 @@ int main(){
 
     const std::array<Uint8, 4> gray = {50, 50, 50, 255};
     PlayButton playButton = PlayButton(shader, buttonX, buttonY, buttonW, buttonH, gray);
-    Slider freqSlider = Slider(shader, freqX, freqY, sliderW, sliderH, 20, 20.0f, 4000.0f, gray);
-    Slider ampSlider = Slider(shader, ampX, ampY, sliderW, sliderH, 20, 0.0f, 1.0f, gray);
+    Slider freqSlider = Slider(shader, freqX, freqY, sliderW, sliderH, 20, 20.0f, 2000.0f, gray);
+    Slider ampSlider = Slider(shader, ampX, ampY, sliderW, sliderH, 20, 0.01f, 1.0f, gray);
     Object object = Object(shader, Shape::Square, objectX, objectY, objectW, objectH, 200);
     Sound snd = Sound();
 
