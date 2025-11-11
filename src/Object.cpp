@@ -12,13 +12,26 @@ Object::Object(GLuint shaderProgram, Shape s, float x, float y, float h, float w
             Particle p;
             p.originX = j * dx*1.5f;
             p.originY = i * dy*1.5f;
-            p.displacement = 0.0f;
+            p.x = x_ + p.originX;
+            p.y = y_ + p.originY;
+            p.velocityX = p.velocityY = 0.0f;
             particles_.push_back(p);
         }
     }
 
     particleVerts_.resize(particles_.size()*2);
     initBuffers();
+
+    for (size_t i = 0; i < particles_.size(); ++i) {
+        particleVerts_[2*i + 0] = particles_[i].x;
+        particleVerts_[2*i + 1] = particles_[i].y;
+    }
+
+    glBindVertexArray(particleVao_);
+    glBindBuffer(GL_ARRAY_BUFFER, particleVbo_);
+    glBufferSubData(GL_ARRAY_BUFFER, 0, particleVerts_.size() * sizeof(float), particleVerts_.data());
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
 }
 
 Object::~Object(){
@@ -59,38 +72,53 @@ void Object::initBuffers(){
 }
 
 void Object::update(const Sound &snd, float dt) {
-    double amp = snd.getAmplitude();
     double freq = snd.getFrequency();
-    static double time = 0.0;
-    time += dt;
+    double omega = 2.0 * SDL_PI_D * freq;
 
     int nx = std::clamp(int(freq / 200.0), 1, 10);
     int ny = std::clamp(int(freq / 300.0), 1, 10);
 
-    double omega = 2.0 * SDL_PI_D * freq;
     double kx = nx * SDL_PI_D / width_;
     double ky = ny * SDL_PI_D / height_;
 
-    float disp;
+    const float forceStrength = 50.0f;
+    const float damping = 0.9f;
+
     for(size_t i = 0; i < particles_.size(); ++i){
         Particle &p = particles_[i];
 
-        disp = static_cast<float>(
-            amp * 40.0 * std::sin(omega * time) *
-            std::sin(kx * p.originX) * std::sin(ky * p.originY)
-        );
+        // mode at origin
+        float modeValue = float(std::sin(kx * p.originX) * std::sin(ky * p.originY));
 
-        p.displacement = disp;
+        // force toward node (modeValue = 0)
+        float fx = -modeValue * float(std::sin(kx * p.originX));
+        float fy = -modeValue * float(std::sin(ky * p.originY));
 
-        particleVerts_[2*i + 0] = x_ + p.originX;
-        particleVerts_[2*i + 1] = y_ + p.originY + disp;
+        p.velocityX += fx * dt * forceStrength;
+        p.velocityY += fy * dt * forceStrength;
 
+        // damping
+        p.velocityX *= damping;
+        p.velocityY *= damping;
+
+        // position
+        p.x += p.velocityX * dt;
+        p.y += p.velocityY * dt;
+
+        // clamp inside plate
+        p.x = std::clamp(p.x, x_, x_ + width_);
+        p.y = std::clamp(p.y, y_, y_ + height_);
+
+        // Update VBO array
+        particleVerts_[2*i + 0] = p.x;
+        particleVerts_[2*i + 1] = p.y;
     }
 
     glBindVertexArray(particleVao_);
     glBindBuffer(GL_ARRAY_BUFFER, particleVbo_);
     glBufferSubData(GL_ARRAY_BUFFER, 0, particleVerts_.size() * sizeof(float), particleVerts_.data());
     glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
 }
 
 

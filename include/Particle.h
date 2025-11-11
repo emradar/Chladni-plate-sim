@@ -5,6 +5,5 @@ struct Particle{
 
     float x, y;
     float originX, originY;
-    float displacement;
-    GLuint vbo, vao;
+    float velocityX, velocityY;
 };
