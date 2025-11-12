@@ -95,18 +95,16 @@ void Sound::tick(){
     const double amp = amplitude_.load();
     const double freq = frequency_.load();
 
-    const int min_audio = (int)((fs * sizeof(float)) / 2);
-    if (SDL_GetAudioStreamQueued(stream_) < min_audio) {
-        for (int i = 0; i < frame_count; ++i) {
-            double phaseInc = 2.0 * SDL_PI_D * freq / fs;
-            phase_ += phaseInc;
-            if (phase_ >= 2.0 * SDL_PI_D) phase_ -= 2.0 * SDL_PI_D;
-        
-            float sample = static_cast<float>(amp * waveform_(phase_));
+    while (SDL_GetAudioStreamQueued(stream_) < fs * sizeof(float) * 2 * 0.1) {
+        float buffer[frame_count * 2]; 
+        for(int i = 0; i < frame_count; ++i){
+            phase_ += 2.0 * SDL_PI_D * freq / fs;
+            if(phase_ >= 2.0 * SDL_PI_D) phase_ -= 2.0 * SDL_PI_D;
+
+            float sample = float(amp * waveform_(phase_));
             buffer[2*i + 0] = sample;
             buffer[2*i + 1] = sample;
         }
-        
         SDL_PutAudioStreamData(stream_, buffer, sizeof(buffer));
     }
 }
