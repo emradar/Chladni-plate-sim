@@ -78,12 +78,13 @@ int main(){
     Sound snd = Sound();
 
     bool running = true;
+    static bool playing = false;
     Uint64 last = SDL_GetTicks();
     while (running){
 
         SDL_Event e;
         while(SDL_PollEvent(&e)){
-            static bool playing = false;
+            
             switch(e.type){
                 case SDL_EVENT_QUIT:
                     running = false;
@@ -125,7 +126,7 @@ int main(){
         last = now;
         double t = now /1000.0;
 
-        object.update(snd, dt);
+        if(playing) object.update(snd, dt);
         snd.tick();
 
         SDL_GetWindowSize(window, &screenW, &screenH);

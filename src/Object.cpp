@@ -76,53 +76,66 @@ void Object::initBuffers(){
  * and force toward nodes with F=−w(x,y)∇w(x,y)
  */
 void Object::update(const Sound &snd, float dt) {
-    double freq = snd.getFrequency();
-    double amp = snd.getAmplitude();
-    double omega = 2 * SDL_PI_D * freq;
-    static double time = 0.0;
+    float freq = float(snd.getFrequency());
+    float amp  = float(snd.getAmplitude());
+    static float time = 0.0f;
     time += dt;
 
-    int mx = std::clamp(int(freq / 200.0), 1, 10); // mode number x-axis 
-    int my = std::clamp(int(freq / 300.0), 1, 10); // mode number y-axis
+    // aluminium properties
+    float E = 7e10f;       // Young's modulus (Pa)
+    float rho = 2700.0f;   // density (kg/m^3)
+    float nu = 0.33f;      // Poisson ratio
+    float h = 0.005f;      // thickness (m)
 
-    const float forceStrength = 150.0f;
+    // bending stiffness approximation
+    float D = E * pow(h,3) / (12.0f * (1.0f - nu*nu));
+
+    // force based on material
+    float materialForce = 100.0f * D / (rho * h);
+
+    // mode numbers
+    int mx = std::clamp(int(freq / 200.0f), 2, 15);// x-axis
+    int my = std::clamp(int(freq / 200.0f), 2, 15);// y-axis
+
     const float damping = 0.99f;
 
-    for(size_t i = 0; i < particles_.size(); ++i){
+    for (size_t i = 0; i < particles_.size(); ++i) {
         Particle &p = particles_[i];
 
-        // mode at origin
-        float w = std::sin((mx * SDL_PI_F * (p.x - x_))/width_) * 
-                            std::sin((my * SDL_PI_F * (p.y - y_))/height_);
+        float rx = p.x - x_;
+        float ry = p.y - y_;
 
-        float dwdx = (((mx * SDL_PI_F) / width_) * 
-                    std::cos((mx * SDL_PI_F * (p.x - x_)) / width_) * 
-                    sin((my * SDL_PI_F * (p.y - y_)) / height_));
+        // Mode shape
+        float w = sinf((mx * SDL_PI_F * rx) / width_) *
+                  sinf((my * SDL_PI_F * ry) / height_);
 
-        float dwdy = (((my*SDL_PI_F)/height_)*
-                    std::sin((mx * SDL_PI_F * (p.x - x_)) / width_) *
-                    std::cos((my * SDL_PI_F * (p.y - y_)) / height_));
+        float dwdx = (mx * SDL_PI_F / width_) *
+                     cosf((mx * SDL_PI_F * rx) / width_) *
+                     sinf((my * SDL_PI_F * ry) / height_);
 
-        // force toward node (modeValue = 0)
-        float fx = -w * dwdx; 
-        float fy = -w * dwdy;
+        float dwdy = (my * SDL_PI_F / height_) *
+                     sinf((mx * SDL_PI_F * rx) / width_) *
+                     cosf((my * SDL_PI_F * ry) / height_);
 
-        p.velocityX += fx * forceStrength;
-        p.velocityY += fy * forceStrength;
+        // force toward node
+        float fx = -w * dwdx * materialForce * amp;
+        float fy = -w * dwdy * materialForce * amp;
 
-        // damping
+        // wall reflection
+        if (p.x <= x_ || p.x >= x_ + width_) fx = -fx;
+        if (p.y <= y_ || p.y >= y_ + height_) fy = -fy;
+
+        // update velocity with damping
+        p.velocityX += fx * dt;
+        p.velocityY += fy * dt;
         p.velocityX *= damping;
         p.velocityY *= damping;
 
-        // position
+        // update position and clamp
         p.x += p.velocityX * dt;
         p.y += p.velocityY * dt;
 
-        // clamp inside plate
-        p.x = std::clamp(p.x, x_, x_ + width_);
-        p.y = std::clamp(p.y, y_, y_ + height_);
-
-        // Update VBO array
+        // update GPU buffer
         particleVerts_[2*i + 0] = p.x;
         particleVerts_[2*i + 1] = p.y;
     }
@@ -133,6 +146,8 @@ void Object::update(const Sound &snd, float dt) {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 }
+
+
 
 
 void Object::draw(int screenW, int screenH){

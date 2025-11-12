@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "RelWithDebInfo/chladni-plate-sim.exe"
+			"path" : "MinSizeRel/chladni-plate-sim.exe"
 		},
 		{
-			"path" : "RelWithDebInfo/chladni-plate-sim.pdb"
+			"path" : "MinSizeRel/chladni-plate-sim.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -59,7 +59,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /MD /Zi /O2 /Ob1 /DNDEBUG"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /MD /O1 /Ob1 /DNDEBUG"
 				}
 			],
 			"includes" : 
@@ -91,7 +91,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG -std:c++17"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG -std:c++17"
 				}
 			],
 			"includes" : 
@@ -129,7 +129,8 @@
 				3,
 				4,
 				5,
-				6
+				6,
+				7
 			]
 		}
 	],
@@ -149,16 +150,16 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG",
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"fragment" : "/machine:x64 /INCREMENTAL:NO /subsystem:console",
 				"role" : "flags"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "vendored\\SDL\\RelWithDebInfo\\SDL3.lib",
+				"fragment" : "vendored\\SDL\\MinSizeRel\\SDL3.lib",
 				"role" : "libraries"
 			},
 			{
@@ -192,7 +193,8 @@
 				3,
 				4,
 				5,
-				6
+				6,
+				7
 			]
 		}
 	],
@@ -214,6 +216,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
 			"path" : "src/PlayButton.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/Renderer.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
