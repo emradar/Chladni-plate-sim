@@ -3,6 +3,7 @@
 Object::Object(GLuint shaderProgram, Shape s, float x, float y, float h, float w, int gridSize)
 : shaderProgram_(shaderProgram), shape_(s), x_(x), y_(y), height_(h), width_(w), gridSize_(gridSize){
 
+    // populating the object with the particles
     particles_.reserve(gridSize*gridSize);
     float dx = width_ / (gridSize - 1);
     float dy = height_ / (gridSize - 1);
@@ -82,6 +83,7 @@ void Object::update(const Sound &snd, float dt) {
     time += dt;
 
     // aluminium properties
+    // TODO: implement material properties
     float E = 7e10f;       // Young's modulus (Pa)
     float rho = 2700.0f;   // density (kg/m^3)
     float nu = 0.33f;      // Poisson ratio
@@ -105,7 +107,7 @@ void Object::update(const Sound &snd, float dt) {
         float rx = p.x - x_;
         float ry = p.y - y_;
 
-        // Mode shape
+        // mode shape
         float w = sinf((mx * SDL_PI_F * rx) / width_) *
                   sinf((my * SDL_PI_F * ry) / height_);
 

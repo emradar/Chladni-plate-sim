@@ -12,6 +12,7 @@ const int FRAMERATE = 60;
 
 int main(){
 
+    // initializing everything
     if (!SDL_Init(SDL_INIT_VIDEO)) {
         std::cerr << "SDL_Init Error: " << SDL_GetError() << "\n";
         return -1;
@@ -71,12 +72,15 @@ int main(){
     float objectX = (screenW-objectW)/2, objectY = (screenH-objectH)/2;
 
     const std::array<Uint8, 4> gray = {50, 50, 50, 255};
+
+    // creating elements
     PlayButton playButton = PlayButton(shader, buttonX, buttonY, buttonW, buttonH, gray);
     Slider freqSlider = Slider(shader, freqX, freqY, sliderW, sliderH, 20, 20.0f, 2000.0f, gray);
     Slider ampSlider = Slider(shader, ampX, ampY, sliderW, sliderH, 20, 0.01f, 1.0f, gray);
     Object object = Object(shader, Shape::Square, objectX, objectY, objectW, objectH, 200);
     Sound snd = Sound();
 
+    // main loop
     bool running = true;
     static bool playing = false;
     Uint64 last = SDL_GetTicks();
@@ -90,6 +94,7 @@ int main(){
                     running = false;
                     snd.stop();
                     break;
+
                 case SDL_EVENT_MOUSE_BUTTON_DOWN:
                     if(playButton.handleEvent(e)){
                         playing ? snd.stop() : snd.start();
@@ -105,6 +110,7 @@ int main(){
                         snd.setAmplitude(ampSlider.getValue());
                         
                     break;
+
                 case SDL_EVENT_KEY_DOWN:
                     auto& key = e.key.key;
                     switch(key){
@@ -112,6 +118,7 @@ int main(){
                             running = false;
                             snd.stop();
                             break;
+
                         case SDLK_SPACE:
                             playing ? snd.stop() : snd.start();
                             playButton.togglePressed();
@@ -126,14 +133,18 @@ int main(){
         last = now;
         double t = now /1000.0;
 
+        // the particles should only get affected if there is a sound
         if(playing) object.update(snd, dt);
+
         snd.tick();
 
+        // resetting the screen
         SDL_GetWindowSize(window, &screenW, &screenH);
         glViewport(0, 0, screenW, screenH);
         glClearColor(1,1,1,1);
         glClear(GL_COLOR_BUFFER_BIT);
 
+        // drawing the objects
         object.draw(screenW, screenH);
         playButton.draw(screenW, screenH);
         freqSlider.draw(screenW, screenH);
@@ -142,6 +153,7 @@ int main(){
         SDL_GL_SwapWindow(window);        
     }
 
+    // destroying everything
     SDL_GL_DestroyContext(glContext);
     SDL_DestroyWindow(window);
     SDL_Quit();

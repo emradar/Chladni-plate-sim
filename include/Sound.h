@@ -7,6 +7,9 @@
 #include <iostream>
 #include <algorithm>
 
+/**
+ * Enum for the type of wave
+ */
 enum class WaveformType{
     Sine,
     Square,
@@ -21,8 +24,24 @@ class Sound{
 
         using WaveformFunc = std::function<float(double phase)>;
 
+        /**
+         * @param origin The origin
+         * @param time The duration
+         * @param amp The amplitude
+         * @param freq The frequency
+         * @param wave The wavelength
+         * @param wform The type of wave
+         */
         Sound(std::vector<int> origin, std::vector<int> time, double amp, double freq, double wave, WaveformType wform);
+        
+        /**
+         * @brief When no arguments are given, a sine wave is produced with a = 0.01 & f = 1
+         */
         Sound();
+        /**
+         * @brief A sound is produced with a = 0.01 & f = 1 in the given waveform
+         * @param wform The type of wave
+         */
         Sound(WaveformType wform);
         ~Sound();
 

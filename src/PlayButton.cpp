@@ -51,6 +51,7 @@ void PlayButton::draw(int screenW, int screenH) {
     std::vector<float> verts;
     if (pressed_) {
         float barW = width_/5.0f;
+        // two vertical rectangles (pause button)
         verts = {
             x_, y_, x_+barW, y_, x_+barW, y_+height_,
             x_, y_, x_+barW, y_+height_, x_, y_+height_,
@@ -59,6 +60,7 @@ void PlayButton::draw(int screenW, int screenH) {
             x_+3*barW, y_, x_+4*barW, y_+height_, x_+3*barW, y_+height_
         };
     } else {
+        // triangle
         verts = { x_, y_, x_, y_+height_, x_+width_, y_+height_/2.0f };
     }
 

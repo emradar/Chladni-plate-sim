@@ -10,9 +10,6 @@
     <ClCompile Include="C:\Programmering\Chladni-plate-sim\src\PlayButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Programmering\Chladni-plate-sim\src\Renderer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="C:\Programmering\Chladni-plate-sim\src\Slider.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

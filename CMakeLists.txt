@@ -25,4 +25,13 @@ target_include_directories(chladni-plate-sim PRIVATE
 )
 
 find_package(OpenGL REQUIRED)
-target_link_libraries(chladni-plate-sim PRIVATE SDL3::SDL3 OpenGL::GL)
+target_link_libraries(chladni-plate-sim PRIVATE SDL3::SDL3)
+
+# Copy SDL3.dll to build output directory after build
+add_custom_command(TARGET chladni-plate-sim POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+    $<TARGET_FILE:SDL3::SDL3>
+    $<TARGET_FILE_DIR:chladni-plate-sim>
+    COMMENT "Copying SDL3.dll to output directory"
+    VERBATIM
+)
