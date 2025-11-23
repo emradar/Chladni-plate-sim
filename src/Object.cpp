@@ -1,7 +1,7 @@
 #include "Object.h"
 
-Object::Object(GLuint shaderProgram, Shape s, float x, float y, float h, float w, int gridSize)
-: shaderProgram_(shaderProgram), shape_(s), x_(x), y_(y), height_(h), width_(w), gridSize_(gridSize){
+Object::Object(GLuint shaderProgram, Shape s, const Material &mat, float x, float y, float h, float w, int gridSize)
+: shaderProgram_(shaderProgram), shape_(s), material_(mat), x_(x), y_(y), height_(h), width_(w), gridSize_(gridSize){
 
     // populating the object with the particles
     particles_.reserve(gridSize*gridSize);
@@ -82,22 +82,15 @@ void Object::update(const Sound &snd, float dt) {
     static float time = 0.0f;
     time += dt;
 
-    // aluminium properties
-    // TODO: implement material properties
-    float E = 7e10f;       // Young's modulus (Pa)
-    float rho = 2700.0f;   // density (kg/m^3)
-    float nu = 0.33f;      // Poisson ratio
-    float h = 0.005f;      // thickness (m)
+    // fundemental freq of the plate
+    float f0 = (SDL_PI_F*SDL_PI_F/2.0f) * sqrt(material_.getD() / (material_.rho() * material_.h())) * (1.0f/(width_*width_) + 1.0f/(height_*height_));
 
-    // bending stiffness approximation
-    float D = E * pow(h,3) / (12.0f * (1.0f - nu*nu));
-
-    // force based on material
-    float materialForce = 100.0f * D / (rho * h);
-
-    // mode numbers
-    int mx = std::clamp(int(freq / 200.0f), 2, 15);// x-axis
-    int my = std::clamp(int(freq / 200.0f), 2, 15);// y-axis
+    // mode numbers, corresponds to patterns
+    int maxMode = 15;
+    float ratio = std::clamp(((freq - f0) / (5000.0f - f0)), 0.0f, 1.0f);
+    int mode = std::round(1 + ratio * (maxMode - 1));
+    int mx = mode; 
+    int my = mode;
 
     const float damping = 0.99f;
 
@@ -120,8 +113,8 @@ void Object::update(const Sound &snd, float dt) {
                      cosf((my * SDL_PI_F * ry) / height_);
 
         // force toward node
-        float fx = -w * dwdx * materialForce * amp;
-        float fy = -w * dwdy * materialForce * amp;
+        float fx = -w * dwdx * material_.getMaterialForce() * amp;
+        float fy = -w * dwdy * material_.getMaterialForce() * amp;
 
         // wall reflection
         if (p.x <= x_ || p.x >= x_ + width_) fx = -fx;
@@ -148,9 +141,6 @@ void Object::update(const Sound &snd, float dt) {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 }
-
-
-
 
 void Object::draw(int screenW, int screenH){
 
@@ -180,8 +170,8 @@ void Object::draw(int screenW, int screenH){
         }
 
         case Shape::Circle:{
-            float cx = x_;
-            float cy = x_;
+            float cx = float(screenW/2);
+            float cy = float(screenH/2);
             float r = x_/2;
             int segments = 32;
 
@@ -196,7 +186,7 @@ void Object::draw(int screenW, int screenH){
         }
 
         case Shape::Triangle:{
-            bg = { x_, y_, x_, y_+height_, x_+width_, y_+height_/2.0f };
+            bg = { float(screenW/2), y_, x_, y_+height_, x_+width_, y_+height_ };
             break;
         }
     }
@@ -213,3 +203,15 @@ void Object::draw(int screenW, int screenH){
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 }
+
+bool Object::handleEvent(const SDL_Event &e){
+    float mx = e.button.x;
+    float my = e.button.y;
+
+    if (mx >= x_ && mx <= x_+width_ && my >= y_ && my <= y_+height_) {
+        clampedPoints_.push_back({mx, my});
+        return true;
+    }
+
+    return false;
+};

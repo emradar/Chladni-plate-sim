@@ -4,6 +4,7 @@
 #include "SDL3/SDL.h"
 #include "Sound.h"
 #include "Particle.h"
+#include "Material.h"
 
 /**
  * An enum for available shapes
@@ -26,7 +27,7 @@ class Object {
          * @param w The width of the object
          * @param gridSize The size of the grid where particles are placed
          */
-        Object(GLuint shaderProgram, Shape s, float x, float y, float h, float w, int gridSize);
+        Object(GLuint shaderProgram, Shape s, const Material &mat, float x, float y, float h, float w, int gridSize);
         ~Object();
         
         /**
@@ -43,14 +44,23 @@ class Object {
          */
         void draw(int screenW, int screenH);
 
+        void setMaterial(const Material &mat){material_ = mat;};
+
+        bool handleEvent(const SDL_Event &e);
+
+        bool toggleClampedEdges(bool clamp){fullyClampedEdges_ = !fullyClampedEdges_;};
+
     private:
         GLuint shaderProgram_;
+        Material material_;
         std::vector<Particle> particles_;
         std::vector<float> particleVerts_;
         Shape shape_;
         float x_, y_, height_, width_;
         int gridSize_;
         unsigned int vao_ = 0, vbo_ = 0, particleVao_ = 0, particleVbo_ = 0;
+        std::vector<std::pair<float, float>> clampedPoints_;
+        bool fullyClampedEdges_ = false;
 
         void initBuffers();
 };

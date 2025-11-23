@@ -4,6 +4,7 @@
 #include "PlayButton.h"
 #include "Slider.h"
 #include "UIShaders.h"
+#include "Material.h"
 #include <thread>
 #include <chrono>
 #include <iostream>
@@ -73,11 +74,14 @@ int main(){
 
     const std::array<Uint8, 4> gray = {50, 50, 50, 255};
 
+    Material::Type selected = Material::Type::Aluminium;
+    Material mat(selected);
+
     // creating elements
     PlayButton playButton = PlayButton(shader, buttonX, buttonY, buttonW, buttonH, gray);
-    Slider freqSlider = Slider(shader, freqX, freqY, sliderW, sliderH, 20, 20.0f, 2000.0f, gray);
+    Slider freqSlider = Slider(shader, freqX, freqY, sliderW, sliderH, 20, 5.0f, 5000.0f, gray);
     Slider ampSlider = Slider(shader, ampX, ampY, sliderW, sliderH, 20, 0.01f, 1.0f, gray);
-    Object object = Object(shader, Shape::Square, objectX, objectY, objectW, objectH, 200);
+    Object object = Object(shader, Shape::Square, mat, objectX, objectY, objectW, objectH, 300);
     Sound snd = Sound();
 
     // main loop

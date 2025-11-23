@@ -2,13 +2,13 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "vendored/SDL/RelWithDebInfo/SDL3.dll"
+			"path" : "vendored/SDL/Release/SDL3.dll"
 		},
 		{
-			"path" : "vendored/SDL/RelWithDebInfo/SDL3.lib"
+			"path" : "vendored/SDL/Release/SDL3.lib"
 		},
 		{
-			"path" : "vendored/SDL/RelWithDebInfo/SDL3.pdb"
+			"path" : "vendored/SDL/Release/SDL3.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -696,7 +696,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG -std:c++17"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG -std:c++17"
 				},
 				{
 					"backtrace" : 9,
@@ -707,7 +707,7 @@
 					"fragment" : "/W3"
 				},
 				{
-					"fragment" : "/YcC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/RelWithDebInfo/cmake_pch.hxx /FpC:/Programmering/Chladni-plate-sim/build/vendored/SDL/SDL3-shared.dir/RelWithDebInfo/cmake_pch.cxx.pch /FIC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/RelWithDebInfo/cmake_pch.hxx"
+					"fragment" : "/YcC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/Release/cmake_pch.hxx /FpC:/Programmering/Chladni-plate-sim/build/vendored/SDL/SDL3-shared.dir/Release/cmake_pch.cxx.pch /FIC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/Release/cmake_pch.hxx"
 				}
 			],
 			"defines" : 
@@ -748,7 +748,7 @@
 			[
 				{
 					"backtrace" : 19,
-					"path" : "C:/Programmering/Chladni-plate-sim/build/vendored/SDL/include-config-relwithdebinfo/build_config"
+					"path" : "C:/Programmering/Chladni-plate-sim/build/vendored/SDL/include-config-release/build_config"
 				},
 				{
 					"backtrace" : 19,
@@ -793,7 +793,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /MD /Zi /O2 /Ob1 /DNDEBUG"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /MD /O2 /Ob2 /DNDEBUG"
 				},
 				{
 					"backtrace" : 9,
@@ -804,7 +804,7 @@
 					"fragment" : "/W3"
 				},
 				{
-					"fragment" : "/YcC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/RelWithDebInfo/cmake_pch.h /FpC:/Programmering/Chladni-plate-sim/build/vendored/SDL/SDL3-shared.dir/RelWithDebInfo/cmake_pch.c.pch /FIC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/RelWithDebInfo/cmake_pch.h"
+					"fragment" : "/YcC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/Release/cmake_pch.h /FpC:/Programmering/Chladni-plate-sim/build/vendored/SDL/SDL3-shared.dir/Release/cmake_pch.c.pch /FIC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/Release/cmake_pch.h"
 				}
 			],
 			"defines" : 
@@ -845,7 +845,7 @@
 			[
 				{
 					"backtrace" : 19,
-					"path" : "C:/Programmering/Chladni-plate-sim/build/vendored/SDL/include-config-relwithdebinfo/build_config"
+					"path" : "C:/Programmering/Chladni-plate-sim/build/vendored/SDL/include-config-release/build_config"
 				},
 				{
 					"backtrace" : 19,
@@ -890,7 +890,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /MD /Zi /O2 /Ob1 /DNDEBUG"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /MD /O2 /Ob2 /DNDEBUG"
 				},
 				{
 					"backtrace" : 9,
@@ -901,7 +901,7 @@
 					"fragment" : "/W3"
 				},
 				{
-					"fragment" : "/YuC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/RelWithDebInfo/cmake_pch.h /FpC:/Programmering/Chladni-plate-sim/build/vendored/SDL/SDL3-shared.dir/RelWithDebInfo/cmake_pch.c.pch /FIC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/RelWithDebInfo/cmake_pch.h"
+					"fragment" : "/YuC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/Release/cmake_pch.h /FpC:/Programmering/Chladni-plate-sim/build/vendored/SDL/SDL3-shared.dir/Release/cmake_pch.c.pch /FIC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/Release/cmake_pch.h"
 				}
 			],
 			"defines" : 
@@ -942,7 +942,7 @@
 			[
 				{
 					"backtrace" : 19,
-					"path" : "C:/Programmering/Chladni-plate-sim/build/vendored/SDL/include-config-relwithdebinfo/build_config"
+					"path" : "C:/Programmering/Chladni-plate-sim/build/vendored/SDL/include-config-release/build_config"
 				},
 				{
 					"backtrace" : 19,
@@ -1219,7 +1219,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /MD /Zi /O2 /Ob1 /DNDEBUG"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /MD /O2 /Ob2 /DNDEBUG"
 				},
 				{
 					"backtrace" : 9,
@@ -1268,7 +1268,7 @@
 			[
 				{
 					"backtrace" : 19,
-					"path" : "C:/Programmering/Chladni-plate-sim/build/vendored/SDL/include-config-relwithdebinfo/build_config"
+					"path" : "C:/Programmering/Chladni-plate-sim/build/vendored/SDL/include-config-release/build_config"
 				},
 				{
 					"backtrace" : 19,
@@ -1313,7 +1313,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /MD /Zi /O2 /Ob1 /DNDEBUG"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /MD /O2 /Ob2 /DNDEBUG"
 				},
 				{
 					"backtrace" : 9,
@@ -1327,7 +1327,7 @@
 					"fragment" : " /GL-"
 				},
 				{
-					"fragment" : "/YuC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/RelWithDebInfo/cmake_pch.h /FpC:/Programmering/Chladni-plate-sim/build/vendored/SDL/SDL3-shared.dir/RelWithDebInfo/cmake_pch.c.pch /FIC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/RelWithDebInfo/cmake_pch.h"
+					"fragment" : "/YuC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/Release/cmake_pch.h /FpC:/Programmering/Chladni-plate-sim/build/vendored/SDL/SDL3-shared.dir/Release/cmake_pch.c.pch /FIC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/Release/cmake_pch.h"
 				}
 			],
 			"defines" : 
@@ -1368,7 +1368,7 @@
 			[
 				{
 					"backtrace" : 19,
-					"path" : "C:/Programmering/Chladni-plate-sim/build/vendored/SDL/include-config-relwithdebinfo/build_config"
+					"path" : "C:/Programmering/Chladni-plate-sim/build/vendored/SDL/include-config-release/build_config"
 				},
 				{
 					"backtrace" : 19,
@@ -1413,7 +1413,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG -std:c++17"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG -std:c++17"
 				},
 				{
 					"backtrace" : 9,
@@ -1424,7 +1424,7 @@
 					"fragment" : "/W3"
 				},
 				{
-					"fragment" : "/YuC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/RelWithDebInfo/cmake_pch.hxx /FpC:/Programmering/Chladni-plate-sim/build/vendored/SDL/SDL3-shared.dir/RelWithDebInfo/cmake_pch.cxx.pch /FIC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/RelWithDebInfo/cmake_pch.hxx"
+					"fragment" : "/YuC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/Release/cmake_pch.hxx /FpC:/Programmering/Chladni-plate-sim/build/vendored/SDL/SDL3-shared.dir/Release/cmake_pch.cxx.pch /FIC:/Programmering/Chladni-plate-sim/build/vendored/SDL/CMakeFiles/SDL3-shared.dir/Release/cmake_pch.hxx"
 				}
 			],
 			"defines" : 
@@ -1465,7 +1465,7 @@
 			[
 				{
 					"backtrace" : 19,
-					"path" : "C:/Programmering/Chladni-plate-sim/build/vendored/SDL/include-config-relwithdebinfo/build_config"
+					"path" : "C:/Programmering/Chladni-plate-sim/build/vendored/SDL/include-config-release/build_config"
 				},
 				{
 					"backtrace" : 19,
@@ -1553,7 +1553,7 @@
 			[
 				{
 					"backtrace" : 19,
-					"path" : "C:/Programmering/Chladni-plate-sim/build/vendored/SDL/include-config-relwithdebinfo/build_config"
+					"path" : "C:/Programmering/Chladni-plate-sim/build/vendored/SDL/include-config-release/build_config"
 				},
 				{
 					"backtrace" : 19,
@@ -1583,11 +1583,11 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 2,
-			"id" : "SDL_uclibc::@8fb704815aaca498baa2"
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+			"backtrace" : 2,
+			"id" : "SDL_uclibc::@8fb704815aaca498baa2"
 		}
 	],
 	"id" : "SDL3-shared::@8fb704815aaca498baa2",
@@ -1596,12 +1596,12 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/machine:x64 /debug /INCREMENTAL",
+				"fragment" : "/machine:x64 /INCREMENTAL:NO",
 				"role" : "flags"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "RelWithDebInfo\\SDL_uclibc.lib",
+				"fragment" : "Release\\SDL_uclibc.lib",
 				"role" : "libraries"
 			},
 			{
